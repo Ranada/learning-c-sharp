@@ -48,7 +48,7 @@ namespace VarsAndData
             }
 
             // Declare a null object and print it
-            object obj = null;
+            object? obj = null;
             Console.Write($"\nNull object: {obj}\n\n");
 
             // Implicit type conversion example: int to bignumber
