@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\bin\Debug\net7.0\ForLoops.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\bin\Debug\net7.0\ForLoops.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\bin\Debug\net7.0\ForLoops.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\bin\Debug\net7.0\ForLoops.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\bin\Debug\net7.0\ForLoops.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\refint\ForLoops.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ForLoops.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\ForLoops\obj\Debug\net7.0\ref\ForLoops.dll
