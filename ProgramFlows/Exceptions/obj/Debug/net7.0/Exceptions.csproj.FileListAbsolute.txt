@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\bin\Debug\net7.0\Exceptions.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\bin\Debug\net7.0\Exceptions.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\bin\Debug\net7.0\Exceptions.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\bin\Debug\net7.0\Exceptions.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\bin\Debug\net7.0\Exceptions.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\refint\Exceptions.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\Exceptions.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\ProgramFlows\Exceptions\obj\Debug\net7.0\ref\Exceptions.dll
