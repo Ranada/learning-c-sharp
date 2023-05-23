@@ -1,0 +1,16 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\bin\Debug\net7.0\Comments.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\bin\Debug\net7.0\Comments.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\bin\Debug\net7.0\Comments.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\bin\Debug\net7.0\Comments.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\bin\Debug\net7.0\Comments.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\bin\Debug\net7.0\Comments.xml
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\refint\Comments.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\Comments.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Comments\obj\Debug\net7.0\ref\Comments.dll
