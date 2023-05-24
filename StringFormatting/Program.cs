@@ -27,22 +27,22 @@ class Program
 
         // TODO: Formatting with alignment and spacing
         Console.WriteLine("\n-------Sales Data------");
-        foreach (int q in quarter) {
+        foreach (int q in quarter)
+        {
             Console.Write("{0,12}", q);
         }
         Console.WriteLine();
-        
-        foreach (int sale in sales) {
+
+        foreach (int sale in sales)
+        {
             Console.Write("{0,12:C2}", sale);
         }
         Console.WriteLine();
-        
-        foreach (double pct in intlMixPct) {
+
+        foreach (double pct in intlMixPct)
+        {
             Console.Write("{0,12:P1}", pct);
         }
         Console.WriteLine();
-
-        // 
-
     }
 }
