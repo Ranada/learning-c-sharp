@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\bin\Debug\net7.0\GuessNumberGame.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\bin\Debug\net7.0\GuessNumberGame.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\bin\Debug\net7.0\GuessNumberGame.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\bin\Debug\net7.0\GuessNumberGame.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\bin\Debug\net7.0\GuessNumberGame.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\refint\GuessNumberGame.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\GuessNumberGame.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\GuessNumberGame\obj\Debug\net7.0\ref\GuessNumberGame.dll
