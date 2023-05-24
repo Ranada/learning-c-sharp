@@ -11,6 +11,7 @@ class Program
         int randomNumber = new Random().Next(20);
         string? input;
         int guess;
+        int guessCount = 0;
         bool continueGame = true;
 
         while (continueGame)
@@ -32,6 +33,7 @@ class Program
             if (isInteger)
             {
                 Console.WriteLine($"Your guess: {guess}");
+                guessCount++;
 
                 if (guess < 0 || guess > 20)
                 {
@@ -54,7 +56,7 @@ class Program
 
                 if (guess == randomNumber)
                 {
-                    Console.WriteLine($"\n*******Congrats! You correctly guessed the random number: {randomNumber}*******");
+                    Console.WriteLine($"\n*******Congrats! You correctly guessed the random number: {randomNumber} with {guessCount} attempts*******");
                     continueGame = false;
                 }
                 Console.WriteLine("------------------------------------------------------------------");
