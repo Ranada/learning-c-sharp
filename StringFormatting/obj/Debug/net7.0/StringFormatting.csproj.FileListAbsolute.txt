@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\bin\Debug\net7.0\StringFormatting.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\bin\Debug\net7.0\StringFormatting.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\bin\Debug\net7.0\StringFormatting.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\bin\Debug\net7.0\StringFormatting.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\bin\Debug\net7.0\StringFormatting.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\refint\StringFormatting.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\StringFormatting.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringFormatting\obj\Debug\net7.0\ref\StringFormatting.dll
