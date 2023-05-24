@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\bin\Debug\net7.0\StringBuilder.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\bin\Debug\net7.0\StringBuilder.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\bin\Debug\net7.0\StringBuilder.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\bin\Debug\net7.0\StringBuilder.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\bin\Debug\net7.0\StringBuilder.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\refint\StringBuilder.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\StringBuilder.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\StringBuilder\obj\Debug\net7.0\ref\StringBuilder.dll
