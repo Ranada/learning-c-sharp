@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tupples\\Tupples.csproj": {}
+    "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tuples\\Tupples.csproj": {}
   },
   "projects": {
-    "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tupples\\Tupples.csproj": {
+    "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tuples\\Tupples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tupples\\Tupples.csproj",
+        "projectUniqueName": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tuples\\Tupples.csproj",
         "projectName": "Tupples",
-        "projectPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tupples\\Tupples.csproj",
+        "projectPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tuples\\Tupples.csproj",
         "packagesPath": "C:\\Users\\neilr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tupples\\obj\\",
+        "outputPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tuples\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\neilr\\AppData\\Roaming\\NuGet\\NuGet.Config"

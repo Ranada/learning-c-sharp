@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xDP7MSuMmxPzLpjTWgNtmGT5wu20/7f88TKV7ex4YONPZKabbct8+uLvYhGMjJaDpVy0D9JQyODbeWJa464KOw==",
+  "dgSpecHash": "VelvuqkiIMEBqGxWXF47mL4MBLYb2DFcElEPeto4y1niQIWtz5YzukwmU+e5+fugD4yatD6C581xX9df0Ttx5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tupples\\Tupples.csproj",
+  "projectFilePath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Tuples\\Tupples.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
