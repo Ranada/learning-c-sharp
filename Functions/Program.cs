@@ -22,6 +22,12 @@ class Program
         Console.WriteLine("The value of num2 BEFORE calling TestFunc2 is: {0}", num2);
         TestFunc2(ref num2);
         Console.WriteLine("The value of num2 AFTER calling TestFunc2 is: {0}\n", num2);
+
+        Console.WriteLine("Example use of `out` keyword");
+        int sum, product;
+        OutFunc(20, 30, out sum, out product);
+        Console.WriteLine($"Sum: {sum} Product: {product}");
+
     }
 
     static void PrintWithPrefix(string str, string prefix = "")
@@ -47,5 +53,12 @@ class Program
         Console.WriteLine("TestFunc2 uses a copy of the argument.");
         num += 10;
         Console.WriteLine("The num incremented by ten in the function is: {0}", num);
+    }
+
+    // Using `out` keyword used to return multiple values. Found in older C# code. Tuples structure is now the preferred method.
+    static void OutFunc(int num1, int num2, out int sum, out int product)
+    {
+        sum = num1 + num2;
+        product = num1 * num2;
     }
 }
