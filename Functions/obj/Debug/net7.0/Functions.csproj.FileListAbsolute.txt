@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\bin\Debug\net7.0\Functions.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\bin\Debug\net7.0\Functions.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\bin\Debug\net7.0\Functions.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\bin\Debug\net7.0\Functions.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\bin\Debug\net7.0\Functions.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\refint\Functions.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\Functions.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\Functions\obj\Debug\net7.0\ref\Functions.dll
