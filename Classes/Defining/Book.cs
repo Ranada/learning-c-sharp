@@ -32,4 +32,12 @@ public class Book
         }
     }
 
+    // TODO: Shorthand way of writing the above using the => operator to create "expression-bodied" properties
+    public string Author {
+        get => _author;
+        set => _author = value;
+    }
+
+
+
 }
