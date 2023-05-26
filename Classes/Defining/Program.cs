@@ -16,5 +16,7 @@ class Program
         b2.Author = "(TEST) Set author using expression-bodied property";
         Console.WriteLine(b2.GetDescription());
 
+        Console.WriteLine(b3.Description);
+
     }
 }

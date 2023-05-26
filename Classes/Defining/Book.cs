@@ -23,20 +23,37 @@ public class Book
 
     // TODO: use Properties to implement access to our internal data
     // This is called a Property with a "backing field"
-    public string Title {
-        get {
+    public string Title
+    {
+        get
+        {
             return _title;
         }
-        set {
+        set
+        {
             _title = value;
         }
     }
 
     // TODO: Shorthand way of writing the above using the => operator to create "expression-bodied" properties
-    public string Author {
+    public string Author
+    {
         get => _author;
         set => _author = value;
     }
+    public int Pages
+    {
+        get => _pages;
+        set => _pages = value;
+    }
+
+    // TODO: Omit the get or set to prevent reading or modification. Here's and example of ommitting set
+    public string Description
+    {
+        get => $"{Title} by {Author}, {Pages} pages";
+    }
+
+
 
 
 
