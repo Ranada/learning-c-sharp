@@ -18,5 +18,9 @@ class Program
 
         Console.WriteLine(b3.Description);
 
+        b3.ISBN = "1234asdf";
+        b3.Price = 99.99m;
+        Console.WriteLine($"ISBN: {b3.ISBN}");
+        Console.WriteLine($"Price: {b3.Price:C}");
     }
 }
