@@ -11,7 +11,7 @@ class Book : Publication
 
     public override string GetDescription()
     {
-        return $"{Title}, {Author}, pages {Pages}, {Price:C}";
+        return $"Title: {Title}, Author: {Author}, {Pages} pages, {Price:C}";
     }
     public string Author
     {
