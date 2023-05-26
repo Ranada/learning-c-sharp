@@ -31,9 +31,15 @@ class Program
         m1.Publisher = "Inertia";
         m2.Price = 123.45m;
         m3.Title = "Pyramids of Giza";
-        
+
         Console.WriteLine(m1.GetDescription());
         Console.WriteLine(m2.GetDescription());
         Console.WriteLine(m3.GetDescription());
+        Console.WriteLine();
+
+        Console.WriteLine("ToString overload example");                           
+        Console.WriteLine(m1); // ToString can be implicitly called
+        Console.WriteLine(m1.ToString("short")); 
+        Console.WriteLine(m1.ToString("long")); 
     }
 }
