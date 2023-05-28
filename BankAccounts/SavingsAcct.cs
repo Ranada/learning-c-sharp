@@ -24,16 +24,13 @@ public class SavingsAcct : Customer
 
     public override void Withdraw(decimal withdrawAmt)
     {
-        Balance -= withdrawAmt;
-
-        if (Balance < 0)
+        if (withdrawAmt > Balance)
         {
-            Balance += withdrawAmt;
             Console.WriteLine("Denied: Cannot overdraw the account.");
         }
         else
         {
-            CountWithdrawal();
+            base.Withdraw(withdrawAmt);
         }
     }
 
@@ -43,6 +40,7 @@ public class SavingsAcct : Customer
 
         if (WithdrawalCount % 3 == 0)
         {
+            Console.WriteLine("More than 3 withdrawals. Charged $2.00 fee.");
             Balance -= 2.00m;
         }
     }
