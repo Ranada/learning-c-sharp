@@ -42,7 +42,7 @@ public class Customer
         Balance += depositAmt;
     }
 
-    public void Withdraw(decimal withdrawAmt)
+    public virtual void Withdraw(decimal withdrawAmt)
     {
         Balance -= withdrawAmt;
         CountWithdrawal();
@@ -55,7 +55,7 @@ public class Customer
 
     public string AccountOwner
     {
-         get => $"{FirstName} {LastName}";
+        get => $"{FirstName} {LastName}";
     }
 
     public virtual void CountWithdrawal()
