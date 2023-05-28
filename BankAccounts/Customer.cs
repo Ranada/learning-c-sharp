@@ -7,7 +7,7 @@ public class Customer
     private decimal _balance;
     private int _withdrawalCount = 0;
 
-    public Customer(string firstName, string lastName, decimal balance)
+    public Customer(string firstName, string lastName, decimal balance=0.0m)
     {
         _firstName = firstName;
         _lastName = lastName;

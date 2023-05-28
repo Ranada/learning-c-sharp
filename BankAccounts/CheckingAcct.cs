@@ -1,20 +1,17 @@
 namespace BankAccounts;
 public class CheckingAcct : Customer
 {
+    private const decimal OVERDRAW_CHARGE = 35.0m;
     public CheckingAcct(string firstName, string lastName, decimal balance)
     : base(firstName, lastName, balance) { }
 
     public override void Withdraw(decimal withdrawAmt)
     {
-        Balance -= withdrawAmt;
-
-        if (Balance < 0)
+        if (withdrawAmt > Balance)
         {
-            Balance -= 35.00m;
+            withdrawAmt += OVERDRAW_CHARGE;
             Console.WriteLine("Overdrawing from account. You were charged a $35 fee.");
         }
-        CountWithdrawal();
-
+        base.Withdraw(withdrawAmt);
     }
-
 }
