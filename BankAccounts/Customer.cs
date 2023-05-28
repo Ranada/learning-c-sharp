@@ -1,3 +1,5 @@
+namespace BankAccounts;
+
 public class Customer
 {
     private string _firstName;
@@ -44,8 +46,8 @@ public class Customer
         return $"{Balance:C2}";
     }
 
-    public string AccountOwner()
+    public string AccountOwner
     {
-        return $"{FirstName} {LastName}";
+         get => $"{FirstName} {LastName}";
     }
 }

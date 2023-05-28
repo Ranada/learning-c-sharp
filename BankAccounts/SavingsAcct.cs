@@ -1,3 +1,5 @@
+namespace BankAccounts;
+
 public class SavingsAcct : Customer
 {
     private decimal _interestRate;
