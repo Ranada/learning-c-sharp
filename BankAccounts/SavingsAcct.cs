@@ -15,4 +15,10 @@ public class SavingsAcct : Customer
         set => _interestRate = value;
     }
 
+    public void ApplyInterest()
+    {
+        decimal interestAmt = Balance * InterestRate;
+        Balance += interestAmt;
+    }
+
 }
