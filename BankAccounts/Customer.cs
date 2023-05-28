@@ -5,6 +5,7 @@ public class Customer
     private string _firstName;
     private string _lastName;
     private decimal _balance;
+    private int _withdrawalCount = 0;
 
     public Customer(string firstName, string lastName, decimal balance)
     {
@@ -30,6 +31,11 @@ public class Customer
         get => _balance;
         set => _balance = value;
     }
+    public int WithdrawalCount
+    {
+        get => _withdrawalCount;
+        set => _withdrawalCount = value;
+    }
 
     public void Deposit(decimal depositAmt)
     {
@@ -39,6 +45,7 @@ public class Customer
     public void Withdraw(decimal withdrawAmt)
     {
         Balance -= withdrawAmt;
+        CountWithdrawal();
     }
 
     public string InquireBalance()
@@ -49,5 +56,10 @@ public class Customer
     public string AccountOwner
     {
          get => $"{FirstName} {LastName}";
+    }
+
+    public virtual void CountWithdrawal()
+    {
+        WithdrawalCount++;
     }
 }
