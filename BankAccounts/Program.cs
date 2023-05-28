@@ -9,15 +9,21 @@ class Program
 
             // Create the Checking Account with initial balance
             CheckingAcct checking = new CheckingAcct("John", "Doe", 2500.0m);
-            Console.WriteLine(checking.AccountOwner());
-            Console.WriteLine(checking.InquireBalance());
-            checking.Deposit(1000.00m);
-            Console.WriteLine(checking.InquireBalance());
-            checking.Withdraw(999.00m);
-            Console.WriteLine(checking.InquireBalance());
+            // Console.WriteLine(checking.AccountOwner());
+            // Console.WriteLine(checking.InquireBalance());
+            // checking.Deposit(1000.00m);
+            // Console.WriteLine(checking.InquireBalance());
+            // checking.Withdraw(999.00m);
+            // Console.WriteLine(checking.InquireBalance());
 
             // // Create the Savings Account with interest and initial balance
-            // SavingsAcct saving = new SavingsAcct("Jane", "Doe", 0.025m, 1000.0m);
+            SavingsAcct saving = new SavingsAcct("Jane", "Doe", 0.025m, 1000.0m);
+            Console.WriteLine(saving.AccountOwner());
+            Console.WriteLine(saving.InquireBalance());
+            saving.Deposit(2990.00m);
+            Console.WriteLine(saving.InquireBalance());
+            saving.Withdraw(990.00m);
+            Console.WriteLine(saving.InquireBalance());
 
             // // Check the balances
             // // Expected output should be 2500 and 1000 at this point
