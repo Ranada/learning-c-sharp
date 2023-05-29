@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\bin\Debug\net7.0\ReverseEachWord.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\bin\Debug\net7.0\ReverseEachWord.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\bin\Debug\net7.0\ReverseEachWord.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\bin\Debug\net7.0\ReverseEachWord.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\bin\Debug\net7.0\ReverseEachWord.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\refint\ReverseEachWord.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ReverseEachWord.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\ReverseEachWord\obj\Debug\net7.0\ref\ReverseEachWord.dll
