@@ -4,7 +4,32 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[] arr = {1,2,3,4,5,6};
-        Array.ForEach(arr, item => Console.WriteLine(item));
+        int[] arr = { 1, 2, 3, 4, 5, 6 };
+
+        Console.WriteLine("BEFORE");
+        Console.WriteLine(String.Join(",", arr) + "\n");
+
+        RotateArray(arr);
+        RotateArray(arr);
+
+        Console.WriteLine("AFTER");
+        Console.WriteLine(String.Join(",", arr) + "\n");
+    }
+
+    static void RotateArray(int[] arr)
+    {
+        int temp = arr[0];
+
+        for (int index = 0; index < arr.Length - 1; index++)
+        {
+            arr[index] = arr[index + 1];
+        }
+        arr[arr.Length - 1] = temp;
     }
 }
+
+// 1,2,3,4,5,6
+// ^
+// Save last index num in temp
+// Shift all the numbers to the left
+// Add temp to last index
