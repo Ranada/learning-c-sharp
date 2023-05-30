@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\bin\Debug\net7.0\RotateArray.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\bin\Debug\net7.0\RotateArray.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\bin\Debug\net7.0\RotateArray.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\bin\Debug\net7.0\RotateArray.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\bin\Debug\net7.0\RotateArray.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\refint\RotateArray.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\RotateArray.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\RotateArray\obj\Debug\net7.0\ref\RotateArray.dll
