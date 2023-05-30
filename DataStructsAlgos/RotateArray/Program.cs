@@ -9,14 +9,14 @@ class Program
         Console.WriteLine("BEFORE");
         Console.WriteLine(String.Join(",", arr) + "\n");
 
-        RotateArray(arr);
-        RotateArray(arr);
+        RotateArrayLeft(arr);
+        RotateArrayLeft(arr);
 
         Console.WriteLine("AFTER");
         Console.WriteLine(String.Join(",", arr) + "\n");
     }
 
-    static void RotateArray(int[] arr)
+    static void RotateArrayLeft(int[] arr)
     {
         int temp = arr[0];
 
@@ -30,6 +30,6 @@ class Program
 
 // 1,2,3,4,5,6
 // ^
-// Save last index num in temp
+// Save first index num in temp
 // Shift all the numbers to the left
 // Add temp to last index
