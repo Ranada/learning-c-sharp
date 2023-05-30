@@ -18,6 +18,16 @@ class Program
             }
         }
 
+        public void Display() {
+           Node current = head;
+
+           while (current != null)
+           {
+            Console.Write(current.data + "->");
+            current = current.next;
+           }
+        } 
+
         static void Main(string[] args)
         {
             CustomLinkedList linkedList = new CustomLinkedList();
@@ -35,15 +45,7 @@ class Program
             fourthNode.next = fifthNode;
             fifthNode.next = sixthNode;
 
-           Node ptr = linkedList.head;
-
-           
-           while (ptr.next != null)
-           {
-            Console.WriteLine($"Value: {ptr.data}, Next Value: {ptr.next.data}");
-            ptr = ptr.next;
-           }
-
+            linkedList.Display();
         }
     }
 }
