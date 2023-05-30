@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\bin\Debug\net7.0\LinkedLists.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\bin\Debug\net7.0\LinkedLists.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\bin\Debug\net7.0\LinkedLists.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\bin\Debug\net7.0\LinkedLists.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\bin\Debug\net7.0\LinkedLists.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\refint\LinkedLists.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\LinkedLists.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\LinkedLists\obj\Debug\net7.0\ref\LinkedLists.dll
