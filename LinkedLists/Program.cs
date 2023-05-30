@@ -18,15 +18,38 @@ class Program
             }
         }
 
-        public void Display() {
-           Node current = head;
+        public void Display()
+        {
+            Node? current = head;
 
-           while (current != null)
-           {
-            Console.Write(current.data + "->");
-            current = current.next;
-           }
-        } 
+            while (current != null)
+            {
+                Console.Write(current.data + "->");
+                current = current.next;
+            }
+        }
+
+        public void DeleteLastHalf()
+        {
+            Node? current = head;
+            if (head == null || head.next == null)
+            {
+                head = null;
+            }
+
+            Node? slow = head;
+            Node? fast = head;
+            Node? prev = null;
+
+            while (fast != null && fast.next != null)
+            {
+                prev = slow;
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            prev.next = null;
+        }
 
         static void Main(string[] args)
         {
@@ -45,8 +68,22 @@ class Program
             fourthNode.next = fifthNode;
             fifthNode.next = sixthNode;
 
+            Console.WriteLine("Before");
             linkedList.Display();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            linkedList.DeleteLastHalf();
+
+            Console.WriteLine("After");
+            linkedList.Display();
+            Console.WriteLine();
         }
     }
 }
 
+
+//      1->2->3->4->5->6->
+//               s
+//                        f
+//            p
