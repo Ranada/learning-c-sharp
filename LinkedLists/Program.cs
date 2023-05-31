@@ -29,6 +29,45 @@ class Program
             }
         }
 
+        public void DeleteKthNodeFromEnd(int k)
+        {
+            if (head == null || k == 0)
+            {
+                return;
+            }
+
+            Node? first = head;
+            Node? second = head;
+
+            for (int i = 0; i < k; i++)
+            {
+                second = second.next;
+
+                if (second?.next == null)
+                {
+                    if (i == k - 1)
+                    {
+                        head = head.next;
+                    }
+                    return;
+                }
+
+            }
+
+            while (second.next != null)
+            {
+                first = first?.next;
+                second = second.next;
+            }
+
+            first.next = first?.next?.next;
+        }
+
+        // k=3
+        // 1->2->3->4->5->6
+        //       f
+        //                s
+
         public void DeleteLastHalf()
         {
             Node? current = head;
@@ -44,7 +83,7 @@ class Program
             while (fast != null && fast.next != null)
             {
                 prev = slow;
-                slow = slow.next;
+                slow = slow?.next;
                 fast = fast.next.next;
             }
 
@@ -73,7 +112,8 @@ class Program
             Console.WriteLine();
             Console.WriteLine();
 
-            linkedList.DeleteLastHalf();
+            // linkedList.DeleteLastHalf();
+            linkedList.DeleteKthNodeFromEnd(3);
 
             Console.WriteLine("After");
             linkedList.Display();
@@ -84,6 +124,6 @@ class Program
 
 
 //      1->2->3->4->5->6->
-//               s
-//                        f
+//      s
+//      f
 //            p
