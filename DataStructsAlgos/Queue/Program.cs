@@ -6,6 +6,8 @@ class Program
 {
     static void printBinary(int n)
     {
+        Console.WriteLine("---------------------------------");
+
         if (n <= 0)
         {
             return;
@@ -13,6 +15,8 @@ class Program
 
         Queue<int> queue = new Queue<int>();
         queue.Enqueue(1);
+
+
         for (int i = 0; i < n; i++)
         {
             int current = queue.Dequeue();
@@ -20,15 +24,15 @@ class Program
             queue.Enqueue(current * 10);
             queue.Enqueue(current * 10 + 1);
         }
-
-
-
     }
 
     // queue: [110, 111, 1000, 1001, 1010, 1011]
     //1, 10, 11, 100, 101
     static void Main(string[] args)
     {
-        printBinary(5);
+        printBinary(2);
+        printBinary(0);
+        printBinary(-1);
+        printBinary(10);
     }
 }
