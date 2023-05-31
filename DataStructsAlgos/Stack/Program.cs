@@ -7,8 +7,18 @@ class Program
     static void PrintNextGreaterElement(int[] arr)
     {
         // If the arr is empty return
+        if (arr == null || arr.Length == 0)
+        {
+            Console.WriteLine("Array is empty or null");
+            return;
+        }
 
-        // If the array length is 1 return -1
+        // If the array length is 1, print "first item -> -1"
+        if (arr.Length == 1)
+        {
+            Console.WriteLine($"{arr[0]} -> -1");
+            return;
+        }
 
         // Create stack
         // Add push first item of array to stack
@@ -25,8 +35,8 @@ class Program
     }
     static void Main(string[] args)
     {
-        int[] arr = new int[] {15, 8, 4, 10};
-        // int[] arr = new int[] {2};
+        // int[] arr = new int[] {15, 8, 4, 10};
+        int[] arr = new int[] {2};
         // int[] arr = new int[] {2, 3};
         // int[] arr = new int[] {};
 
