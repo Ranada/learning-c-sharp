@@ -22,29 +22,48 @@ class Program
 
         // Create stack
         Stack<int> stack = new Stack<int>();
- 
+
         // Add push first item of array to stack
         stack.Push(arr[0]);
 
         // Loop through array starting from index 1
         for (int index = 1; index < arr.Length; index++)
         {
-            stack.Push(arr[index]);
+            // Peek at the top of the stack
+            int topItem = stack.Peek();
+            int currentItem = arr[index];
+
+            // If the current item is greater than peek item
+            if (currentItem > topItem)
+            {
+                // Print "peek item -> current item"
+                Console.WriteLine($"{topItem} -> {currentItem}");
+                // Pop stack
+                stack.Pop();
+            }
+            else
+            {
+                // Else push the current item to the stack
+                stack.Push(currentItem);
+            }
+
+            if (index == arr.Length -1)
+            {
+                stack.Push(currentItem);
+            }
         }
 
-        foreach (int num in stack) Console.WriteLine(num);
-            // Peek at the top of the stack
-            // If the current item is greater than peek item 
-                // Print "peek item -> current item"
-                // Pop stack
-            // Else push the current item to the stack
-
         // While the stack is not null
-            // Pop the stack and print "Popped item -> -1"
+        // Pop the stack and print "Popped item -> -1"
+        foreach (int num in stack)
+        {
+            Console.WriteLine($"{num} -> -1");
+        }
+
     }
     static void Main(string[] args)
     {
-        int[] arr = new int[] {15, 8, 4, 10};
+        int[] arr = new int[] { 15, 8, 4, 10 };
         // int[] arr = new int[] {2};
         // int[] arr = new int[] {2, 3};
         // int[] arr = new int[] {};
