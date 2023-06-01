@@ -29,6 +29,6 @@ class Employee
     }
     public void DisplayInfo()
     {
-        Console.WriteLine($"Id: {Id} Name: {Name} Department: {Department}");
+        Console.WriteLine($"{Id}, {Name}, {Department}");
     }
 }
