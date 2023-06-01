@@ -86,9 +86,12 @@ class Program
         BinarySearchTree.Insert(rootNode, 3);
         BinarySearchTree.Insert(rootNode, -5);
 
+        Console.WriteLine("Current BinarySearchTree");
         BinarySearchTree.InOrderTraversal(rootNode);
-        Console.WriteLine();
+        Console.WriteLine("\n");
 
+
+        Console.WriteLine("Search results");
         Console.WriteLine(BinarySearchTree.Search(rootNode, 4)); // True
         Console.WriteLine(BinarySearchTree.Search(rootNode, 6)); // True
         Console.WriteLine(BinarySearchTree.Search(rootNode, 10)); // True
