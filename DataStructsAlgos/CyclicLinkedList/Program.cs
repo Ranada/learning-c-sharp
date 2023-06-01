@@ -24,14 +24,25 @@ class CustomLinkedList
         {
             return false;
         }
-        
-        Node curr = head;
+
+        Node? curr = head;
 
         while (curr != null)
         {
             Console.WriteLine(curr.data);
+            if (visitedNodes.Contains(curr.data))
+            {
+                Console.WriteLine("The list has a cycle!");
+                return true;
+            }
+            else
+            {
+                visitedNodes.Add(curr.data);
+            }
             curr = curr.next;
         }
+
+        Console.WriteLine("The list is linear.");
 
         return false;
     }
@@ -49,12 +60,16 @@ class CustomLinkedList
         secondNode.next = thirdNode;
         thirdNode.next = fourthNode;
 
+        Console.WriteLine("----First linked list----");
         Console.WriteLine(noCycleLinkedList.hasCycle());
+        Console.WriteLine();
 
-        // CustomLinkedList cycleLinkedList = new CustomLinkedList();
-        // cycleLinkedList.head = firstNode;
-        // thirdNode.next = secondNode;
+        CustomLinkedList cycleLinkedList = new CustomLinkedList();
+        cycleLinkedList.head = firstNode;
+        thirdNode.next = secondNode;
 
-        // Console.WriteLine(cycleLinkedList.hasCycle());
+        Console.WriteLine("----Second linked list----");
+        Console.WriteLine(cycleLinkedList.hasCycle());
+        Console.WriteLine();
     }
 }
