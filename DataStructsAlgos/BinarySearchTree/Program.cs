@@ -23,21 +23,58 @@ class Program
             {
                 if (value < root.Data)
                 {
-                    Console.WriteLine("Inserting on the LEFT");
                     root.Left = Insert(root.Left, value);
                 }
                 if (value > root.Data)
                 {
-                    Console.WriteLine("Inserting on the Right");
                     root.Right = Insert(root.Right, value);
                 }
             }
             return root;
         }
+
+        public static void InOrderTraversal(Node? root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            InOrderTraversal(root.Left);
+            Console.Write(root.Data + "->");
+            InOrderTraversal(root.Right);
+        }
+        public static bool Search(Node? root, int value)
+        {
+            if (root == null)
+            {
+                return false;
+            }
+
+            Console.Write(root.Data + "->");
+
+            if (value == root.Data) return true;
+
+            if (value < root.Data)
+            {
+                return Search(root.Left, value);
+            }
+
+            if (value > root.Data)
+            {
+                return Search(root.Right, value);
+            }
+
+            return false;
+        }
     }
 
     static void Main(string[] args)
     {
+        //          4
+        //      2       6
+        //  -10   3       10
+        //     -5       8    99
         Node? rootNode = new Node();
         rootNode.Data = 4;
 
@@ -46,5 +83,18 @@ class Program
         BinarySearchTree.Insert(rootNode, 10);
         BinarySearchTree.Insert(rootNode, -10);
         BinarySearchTree.Insert(rootNode, 99);
+        BinarySearchTree.Insert(rootNode, 3);
+        BinarySearchTree.Insert(rootNode, -5);
+
+        BinarySearchTree.InOrderTraversal(rootNode);
+        Console.WriteLine();
+
+        Console.WriteLine(BinarySearchTree.Search(rootNode, 4)); // True
+        Console.WriteLine(BinarySearchTree.Search(rootNode, 6)); // True
+        Console.WriteLine(BinarySearchTree.Search(rootNode, 10)); // True
+        Console.WriteLine(BinarySearchTree.Search(rootNode, -10)); // True
+        Console.WriteLine(BinarySearchTree.Search(rootNode, 99)); // True
+        Console.WriteLine(BinarySearchTree.Search(rootNode, 7)); // False
+        Console.WriteLine(BinarySearchTree.Search(rootNode, 0)); // False
     }
 }
