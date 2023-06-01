@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\bin\Debug\net7.0\FreqCounter.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\bin\Debug\net7.0\FreqCounter.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\bin\Debug\net7.0\FreqCounter.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\bin\Debug\net7.0\FreqCounter.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\bin\Debug\net7.0\FreqCounter.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\refint\FreqCounter.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\FreqCounter.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FreqCounter\obj\Debug\net7.0\ref\FreqCounter.dll
