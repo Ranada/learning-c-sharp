@@ -53,19 +53,18 @@ class Program
 
             Console.Write(root.Data + "->");
 
-            if (value == root.Data) return true;
-
             if (value < root.Data)
             {
                 return Search(root.Left, value);
             }
-
-            if (value > root.Data)
+            else if (value > root.Data)
             {
                 return Search(root.Right, value);
             }
-
-            return false;
+            else
+            {
+                return true;
+            }
         }
     }
 
