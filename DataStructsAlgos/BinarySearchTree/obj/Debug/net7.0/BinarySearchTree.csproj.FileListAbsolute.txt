@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\bin\Debug\net7.0\BinarySearchTree.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\bin\Debug\net7.0\BinarySearchTree.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\bin\Debug\net7.0\BinarySearchTree.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\bin\Debug\net7.0\BinarySearchTree.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\bin\Debug\net7.0\BinarySearchTree.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\refint\BinarySearchTree.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\BinarySearchTree.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinarySearchTree\obj\Debug\net7.0\ref\BinarySearchTree.dll
