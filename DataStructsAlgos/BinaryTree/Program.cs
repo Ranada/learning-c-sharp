@@ -9,6 +9,25 @@ class Program
         public int Data { get; set; }
     }
 
+    class BinaryTree
+    {
+        // PreOrderTraversal
+        public static void PreOrderTraversal(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            Console.Write(root.Data + "->");
+            PreOrderTraversal(root.Left);
+            PreOrderTraversal(root.Right);
+        }
+
+        // InOrderTraversal
+        // PostOrderTraversal
+    }
+
     static void Main(string[] args)
     {
         //      4
@@ -41,9 +60,11 @@ class Program
 
         nodeThree.Left = nodeSix;
 
-        Console.WriteLine(nodeFour.Data);
-        Console.WriteLine(nodeFour.Left.Data);
-        Console.WriteLine(nodeFour.Right.Data);
+        Node rootNode = nodeFour;
+
+        Console.WriteLine("Pre-order traversal");
+        BinaryTree.PreOrderTraversal(rootNode);
         Console.WriteLine();
+
     }
 }
