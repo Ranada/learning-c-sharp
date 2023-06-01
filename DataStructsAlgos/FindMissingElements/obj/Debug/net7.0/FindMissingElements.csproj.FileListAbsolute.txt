@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\bin\Debug\net7.0\FindMissingElements.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\bin\Debug\net7.0\FindMissingElements.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\bin\Debug\net7.0\FindMissingElements.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\bin\Debug\net7.0\FindMissingElements.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\bin\Debug\net7.0\FindMissingElements.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\refint\FindMissingElements.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\FindMissingElements.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\FindMissingElements\obj\Debug\net7.0\ref\FindMissingElements.dll
