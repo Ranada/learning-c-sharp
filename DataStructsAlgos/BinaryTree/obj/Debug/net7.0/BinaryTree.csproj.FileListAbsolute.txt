@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\bin\Debug\net7.0\BinaryTree.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\bin\Debug\net7.0\BinaryTree.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\bin\Debug\net7.0\BinaryTree.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\bin\Debug\net7.0\BinaryTree.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\bin\Debug\net7.0\BinaryTree.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\refint\BinaryTree.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\BinaryTree.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\DataStructsAlgos\BinaryTree\obj\Debug\net7.0\ref\BinaryTree.dll
