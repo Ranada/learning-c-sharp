@@ -18,6 +18,21 @@ class CustomLinkedList
 
     public Boolean hasCycle()
     {
+        HashSet<int> visitedNodes = new HashSet<int>();
+
+        if (head == null || head.next == null)
+        {
+            return false;
+        }
+        
+        Node curr = head;
+
+        while (curr != null)
+        {
+            Console.WriteLine(curr.data);
+            curr = curr.next;
+        }
+
         return false;
     }
 
@@ -36,10 +51,10 @@ class CustomLinkedList
 
         Console.WriteLine(noCycleLinkedList.hasCycle());
 
-        CustomLinkedList cycleLinkedList = new CustomLinkedList();
-        cycleLinkedList.head = firstNode;
-        thirdNode.next = secondNode;
+        // CustomLinkedList cycleLinkedList = new CustomLinkedList();
+        // cycleLinkedList.head = firstNode;
+        // thirdNode.next = secondNode;
 
-        Console.WriteLine(cycleLinkedList.hasCycle());
+        // Console.WriteLine(cycleLinkedList.hasCycle());
     }
 }
