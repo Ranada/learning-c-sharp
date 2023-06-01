@@ -11,7 +11,6 @@ class Program
 
     class BinaryTree
     {
-        // PreOrderTraversal
         public static void PreOrderTraversal(Node root)
         {
             if (root == null)
@@ -24,8 +23,29 @@ class Program
             PreOrderTraversal(root.Right);
         }
 
-        // InOrderTraversal
-        // PostOrderTraversal
+        public static void InOrderTraversal(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            InOrderTraversal(root.Left);
+            Console.Write(root.Data + "->");
+            InOrderTraversal(root.Right);
+        }
+
+        public static void PostOrderTraversal(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            PostOrderTraversal(root.Left);
+            PostOrderTraversal(root.Right);
+            Console.Write(root.Data + "->");
+        }
     }
 
     static void Main(string[] args)
@@ -64,7 +84,16 @@ class Program
 
         Console.WriteLine("Pre-order traversal");
         BinaryTree.PreOrderTraversal(rootNode);
-        Console.WriteLine();
+        Console.WriteLine("\n");
+        
+        Console.WriteLine("In-order traversal");
+        BinaryTree.InOrderTraversal(rootNode);
+        Console.WriteLine("\n");
+        
+        Console.WriteLine("Post-order traversal");
+        BinaryTree.PostOrderTraversal(rootNode);
+        Console.WriteLine("\n");
+        
 
     }
 }
