@@ -11,9 +11,9 @@ GO
 -- Write a query that retrieves the required information
 -- This query will serve as the model for the function
         -- Turn the query into a table-valued function
-        -- CREATE OR ALTER FUNCTION Sales.LastOrder (@CustomerID AS INT)
-        -- RETURNS TABLE
-        -- AS RETURN
+         CREATE OR ALTER FUNCTION Sales.LastOrder (@CustomerID AS INT)
+         RETURNS TABLE
+         AS RETURN
 SELECT
     Orders.OrderID AS [Order Number],
     Orders.CustomerID AS [Customer Number],
@@ -28,7 +28,7 @@ FROM Sales.Orders
 WHERE Orders.OrderID =
     (SELECT TOP 1 Orders.OrderID
      FROM Sales.Orders
-     WHERE Orders.CustomerID = 123
+     WHERE Orders.CustomerID = @CustomerID
      ORDER BY Orders.OrderID DESC)
 ;
 GO
