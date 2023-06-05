@@ -1,27 +1,41 @@
--- Create a function to analyze temperatures
--- < 3.5 'too cold'
--- > 4 'too hot'
--- everything else 'just right'
+-- Challenge: Create a Function
 
--- Evaluate data
-SELECT * FROM Warehouse.ColdRoomTemperatures;
+-- Evaluate temperatures in Warehouse.ColdRoomTemperatures
+-- Less than 3.5 degrees is too cold
+-- Greater than 4 degrees is too hot
+-- Between 3.5 and 4 degrees is just right
+
+USE WideWorldImporters;
 GO
 
--- Create function to describe temperature range
-CREATE FUNCTION Warehouse.TempDescription (@Temperature decimal(10,2))
+CREATE OR ALTER FUNCTION Warehouse.TempDescription (@Temp DECIMAL(10,2))
 RETURNS char(10)
 AS
 BEGIN
-	DECLARE @Description char(10);
-	SET @Description = 
-		CASE WHEN @Temperature < 3.5 THEN 'Too Cold'
-			WHEN @Temperature > 4 THEN 'Too Hot'
-			ELSE 'Just Right'
-		END;
-	RETURN @Description;
+	BEGIN IF @Temp < 3.5
+		RETURN 'Too cold'
+	END
+
+	BEGIN IF @Temp > 4
+		RETURN 'Too hot'
+	END
+
+	RETURN 'Just right'
 END;
 GO
 
+
+-- Local test cases
+SELECT Warehouse.TempDescription(99.99) AS 'Temperature Description';
+GO
+
+SELECT Warehouse.TempDescription(-1.00) AS 'Temperature Description';
+GO
+
+SELECT Warehouse.TempDescription(3.75) AS 'Temperature Description';
+GO
+
+-- Lesson test cases
 -- Test Function
 SELECT ColdRoomTemperatureID,
 	ColdRoomSensorNumber,
