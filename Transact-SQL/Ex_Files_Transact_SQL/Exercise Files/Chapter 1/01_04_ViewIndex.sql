@@ -9,9 +9,9 @@ GO
 
 -- Get a user friendly look at the information
         -- Create a schemabound view
-        -- CREATE VIEW Warehouse.StockItemDetails
-        -- WITH SCHEMABINDING
-		-- AS
+         CREATE VIEW Warehouse.StockItemDetails
+         WITH SCHEMABINDING
+		 AS
 SELECT
     StockItemStockGroups.StockItemStockGroupID,
     StockItems.StockItemName,
