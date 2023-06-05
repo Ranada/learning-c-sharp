@@ -16,7 +16,8 @@ WHERE objects.type_desc = 'VIEW';
 -- Find information about a specific view
 SELECT *
 FROM sys.sql_modules
-WHERE object_id = 1678629023 -- OBJECT_ID('Website.Suppliers')
+--WHERE object_id = 1678629023
+WHERE object_id = OBJECT_ID('Website.Suppliers')
 ;
 
 -- Use a stored procedure to write out the view's definition
