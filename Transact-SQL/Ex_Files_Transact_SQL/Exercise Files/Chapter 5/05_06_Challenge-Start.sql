@@ -1,5 +1,3 @@
--- If you did not complete the Chapter 3 challenge,
--- set up the challenge table and populate rows
 DROP TABLE IF EXISTS dbo.BankAccounts;
 CREATE TABLE dbo.BankAccounts (
     AccountID INT PRIMARY KEY,
@@ -12,27 +10,45 @@ GO
 SELECT * FROM dbo.BankAccounts;
 GO
 
--- Create a stored procedure that contains a transaction for transferring funds
--- Then use the stored procedure to transfer 50.00 from Account 1 to Account 3.
-
-CREATE OR ALTER PROCEDURE dbo.TransferFunds (@FromAccount AS INT, @ToAccount AS INT, @Amount AS decimal(10,2))
+CREATE OR ALTER PROCEDURE dbo.TransferFunds (@FromAccount AS INT, @ToAccount AS INT, @Amount AS DECIMAL(10,2))
 AS
-SET XACT_ABORT ON;
-BEGIN TRANSACTION;
 
-UPDATE dbo.BankAccounts
-	SET Balance -= @Amount
-	WHERE AccountID = @FromAccount;
+BEGIN TRY
+	BEGIN TRANSACTION;
 
-UPDATE dbo.BankAccounts
-	SET Balance += @Amount
-	WHERE AccountID = @ToAccount;
+	BEGIN IF (SELECT AccountID FROM dbo.BankAccounts WHERE AccountID = @FromAccount) IS NULL
+		THROW 500001, 'Oops! The "FROM" account does not exist. Try again.', 1
+	END;
 
-COMMIT TRANSACTION;
-SET XACT_ABORT OFF;
+	BEGIN IF (SELECT AccountID FROM dbo.BankAccounts WHERE AccountID = @ToAccount) IS NULL
+		THROW 500002, 'Oops! The "TO" account does not exist. Try again.', 1
+	END;
+
+	BEGIN IF (SELECT BALANCE FROM dbo.BankAccounts WHERE AccountID = @FromAccount) + 0.00 < @Amount
+		THROW 500003, 'Oh snap! You do not have enough money to transfer.', 1
+	END;
+
+	UPDATE dbo.BankAccounts
+		SET Balance -= @Amount
+		WHERE AccountID = @FromAccount;
+
+	UPDATE dbo.BankAccounts
+		SET Balance += @Amount
+		WHERE AccountID = @ToAccount;
+
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	ROLLBACK TRANSACTION;
+	PRINT ERROR_MESSAGE()
+END CATCH
 ;
 GO
 
+-- Test cases
 EXEC dbo.TransferFunds 1, 3, 50.00;
+EXEC dbo.TransferFunds 99, 3, 99.00;
+EXEC dbo.TransferFunds 1, 5, 55.00;
+EXEC dbo.TransferFunds 1, 3, 777.00;
 
 SELECT * FROM dbo.BankAccounts;
