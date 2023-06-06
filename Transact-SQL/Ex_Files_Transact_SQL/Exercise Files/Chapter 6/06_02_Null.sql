@@ -5,8 +5,8 @@ GO
 -- Test for equality
 DECLARE @varA INT;
 DECLARE @varB INT;
-SET @varA = 1;
-SET @varB = 2;
+SET @varA = NULL;
+SET @varB = NULL;
 SELECT CASE WHEN (@varA = @varB)
     THEN 'Equal'
     ELSE 'Not Equal'
