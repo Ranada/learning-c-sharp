@@ -24,7 +24,7 @@ BEGIN TRY
 		THROW 500002, 'Oops! The "TO" account does not exist. Try again.', 1
 	END;
 
-	BEGIN IF (SELECT BALANCE FROM dbo.BankAccounts WHERE AccountID = @FromAccount) + 0.00 < @Amount
+	BEGIN IF (SELECT BALANCE FROM dbo.BankAccounts WHERE AccountID = @FromAccount) < @Amount
 		THROW 500003, 'Oh snap! You do not have enough money to transfer.', 1
 	END;
 
