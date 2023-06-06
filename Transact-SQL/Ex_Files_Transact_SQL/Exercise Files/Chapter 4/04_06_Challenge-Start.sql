@@ -13,3 +13,25 @@ GO
 
 -- Create a stored procedure that contains a transaction for transferring funds
 -- Then use the stored procedure to transfer 50.00 from Account 1 to Account 3.
+
+CREATE OR ALTER PROCEDURE dbo.TransferFunds (@FromAccount INT, @ToAccount INT, @Amount DECIMAL(5,2))
+AS
+BEGIN TRANSACTION TransferSession WITH MARK;
+
+SET XACT_ABORT ON;
+SELECT @@TRANCOUNT AS 'Open Transactions';
+
+UPDATE dbo.BankAccounts
+SET Balance -= @Amount
+WHERE AccountID = @FromAccount;
+
+UPDATE dbo.BankAccounts
+SET Balance += @Amount
+WHERE AccountID = @ToAccount;
+
+COMMIT TRANSACTION;
+GO
+
+EXEC dbo.TransferFunds 1, 3, 50.00;
+
+SELECT * FROM dbo.BankAccounts;
