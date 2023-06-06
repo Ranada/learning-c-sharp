@@ -41,9 +41,9 @@ END CATCH;
 
 -- Use IF...ELSE or CASE statements to perform different tasks in CATCH block
 BEGIN TRY
---    INSERT INTO Application.People (FullName) VALUES ('Adam');
---    SELECT 1/0;
---    EXECUTE Warehouse.uspInsertColor 'Blue';
+    --INSERT INTO Application.People (FullName) VALUES ('Adam');
+    --SELECT 1/0;
+    EXECUTE Warehouse.uspInsertColor 'Blue';
 END TRY
 BEGIN CATCH
     BEGIN IF ERROR_NUMBER() = 515

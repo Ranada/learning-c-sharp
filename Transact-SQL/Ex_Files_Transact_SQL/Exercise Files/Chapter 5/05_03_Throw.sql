@@ -2,6 +2,8 @@
 USE WideWorldImporters;
 GO
 
+SELECT * FROM Application.People;
+GO
 
 -- Create a custom error message
 BEGIN TRY
