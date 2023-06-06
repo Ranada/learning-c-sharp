@@ -19,3 +19,21 @@ GO
 -- 1) view information from Sales.Customers
 -- 2) view information from Sales.Orders
 -- 3) write a row to Sales.CustomerAccountAudit to log activity
+
+CREATE OR ALTER PROCEDURE Sales.SalesInfo (@Customer AS INT)
+AS
+SELECT CustomerID, CustomerName, PhoneNumber
+	FROM Sales.Customers
+	WHERE CustomerID = @Customer;
+SELECT OrderID, CustomerID, ExpectedDeliveryDate
+	FROM Sales.Orders
+	WHERE CustomerID = @Customer;
+INSERT INTO Sales.CustomerAccountAudit (CustomerID, ReviewDate)
+	VALUES (@Customer, GETDATE());
+GO
+
+EXEC Sales.SalesInfo 1;
+GO
+
+SELECT * FROM Sales.CustomerAccountAudit;
+GO
