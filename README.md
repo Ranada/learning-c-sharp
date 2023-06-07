@@ -19,4 +19,4 @@ https://www.linkedin.com/in/neilranada/
 Neil Ranada, Software Engineer, UX
 
 ## Certificate of completion
-<img src="./public/CertificateOfCompletion_Software Development Fundamentals-neil-ranada" >
+<img src="./public/CertificateOfCompletion_Software Development Fundamentals-neil-ranada.jpg" >
