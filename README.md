@@ -10,8 +10,6 @@ My coding includes:
 3. Data Structures and Algorithms
 4. Transact SQL (T-SQL)
 
-## Certificate of completion
-<img src="./public/CertificateOfCompletion_Software Development Fundamentals-neil-ranada" >
 
 ## Contact and connect with me
 neil.ranada@outlook.com </br>
@@ -19,3 +17,6 @@ https://www.linkedin.com/in/neilranada/
 
 ### Thank you!
 Neil Ranada, Software Engineer, UX
+
+## Certificate of completion
+<img src="./public/CertificateOfCompletion_Software Development Fundamentals-neil-ranada" >
