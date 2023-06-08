@@ -1291,19 +1291,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\BankAccounts\\BankAccounts.csproj",
+      "projectUniqueName": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Fundamentals\\BankAccounts\\BankAccounts.csproj",
       "projectName": "BankAccounts",
-      "projectPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\BankAccounts\\BankAccounts.csproj",
+      "projectPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Fundamentals\\BankAccounts\\BankAccounts.csproj",
       "packagesPath": "C:\\Users\\neilr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\BankAccounts\\obj\\",
+      "outputPath": "C:\\Users\\neilr\\OneDrive\\professional\\development\\c-sharp\\learning-c-sharp\\Fundamentals\\BankAccounts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\neilr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\neilr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
