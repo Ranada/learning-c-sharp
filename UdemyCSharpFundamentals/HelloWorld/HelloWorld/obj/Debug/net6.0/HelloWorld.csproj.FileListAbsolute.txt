@@ -1,0 +1,17 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\bin\Debug\net6.0\HelloWorld.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\bin\Debug\net6.0\HelloWorld.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\bin\Debug\net6.0\HelloWorld.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\bin\Debug\net6.0\HelloWorld.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\bin\Debug\net6.0\HelloWorld.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.Properties.Resources.resources
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.csproj.GenerateResource.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\refint\HelloWorld.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\HelloWorld.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCSharpFundamentals\HelloWorld\HelloWorld\obj\Debug\net6.0\ref\HelloWorld.dll
