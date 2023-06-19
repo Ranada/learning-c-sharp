@@ -1,0 +1,15 @@
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\bin\Debug\net6.0\2-29-ParsingExercise.exe
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\bin\Debug\net6.0\2-29-ParsingExercise.deps.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\bin\Debug\net6.0\2-29-ParsingExercise.runtimeconfig.json
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\bin\Debug\net6.0\2-29-ParsingExercise.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\bin\Debug\net6.0\2-29-ParsingExercise.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.csproj.AssemblyReference.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.AssemblyInfoInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.AssemblyInfo.cs
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.csproj.CoreCompileInputs.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\refint\2-29-ParsingExercise.dll
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.pdb
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\2-29-ParsingExercise.genruntimeconfig.cache
+C:\Users\neilr\OneDrive\professional\development\c-sharp\learning-c-sharp\UdemyCompleteCSharpMasterclass\2-29-ParsingExercise\2-29-ParsingExercise\obj\Debug\net6.0\ref\2-29-ParsingExercise.dll
