@@ -5,9 +5,29 @@
         static void Main(string[] args)
         {
             string? entry;
+            string? @char = null;
+            int? index;
+
             do {
-                Console.WriteLine("Please enter your name and press enter:");
+                Console.WriteLine("Enter a string:");
                 entry = Console.ReadLine();
+                
+                Console.WriteLine();
+
+                Console.WriteLine("Enter a character to search:");
+                @char = Console.ReadLine();
+
+                index = entry?.ToUpper().IndexOf(@char.ToUpper());
+
+                if (index >= 0)
+                {
+                    Console.WriteLine($"Character found at index: {index}");
+                }
+                else {
+                    Console.WriteLine("Character not found.");
+                }
+
+                Console.WriteLine();
 
                 Console.WriteLine($"Uppercase: {entry?.ToUpper()}");
                 Console.WriteLine($"Lowercase: {entry?.ToLower()}");
