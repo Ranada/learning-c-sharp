@@ -24,41 +24,47 @@ namespace _4_59_LoginRegister
 
         public static void Login()
         {
+            bool usernameValid = false;
+            bool passwordValid = false;
             string usernameEntry = "";
             string passwordEntry = "";
 
-            while (usernameEntry != username)
-            {
-                Console.WriteLine();
-                Console.WriteLine("Enter username:");
-                if (username == Console.ReadLine())
-                {
-                    Console.WriteLine("Username is valid.");
-                    Console.WriteLine();
-    
-                    while (passwordEntry != password)
-                    {
-                        Console.WriteLine();
-                        Console.WriteLine("Enter password:");
-                        if (password == Console.ReadLine())
-                        {
-                            Console.WriteLine("Password is valid");
-                            Console.WriteLine("Successful login!");
-                            return;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Password is incorrect. Try again.");
-                            continue;
-                        }
+            while (!usernameValid)
+            { 
+                checkUsername(ref usernameEntry, ref usernameValid);
+            }
 
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Username does no exist. Try again.\n");
-                    continue;
-                }
+            while (!passwordValid)
+            {
+                checkPassword(ref passwordEntry, ref passwordValid);
+            }
+        }
+
+        public static void checkUsername(ref string usernameEntry, ref bool usernameValid) {
+            Console.WriteLine("Enter username:");
+            if (username == Console.ReadLine())
+            {
+                Console.WriteLine("Username is valid.\n");
+                usernameValid = true;
+            }
+            else
+            {
+                Console.WriteLine("Username does no exist. Try again.\n");
+            }
+        }
+
+        public static void checkPassword(ref string passwordEntry, ref bool passwordValid) {   
+            Console.WriteLine("Enter password:");
+            if (password == Console.ReadLine())
+            {
+                Console.WriteLine("Password is valid");
+                Console.WriteLine("Successful login!");
+                passwordValid = true;
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Password is incorrect. Try again.\n");
             }
         }
     }
