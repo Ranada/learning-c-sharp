@@ -5,20 +5,18 @@
         static void Main(string[] args)
         {
             string entry = "";
-            int temp = 0;
-            int numTemp = 0;
+            int parsedNum = 0;
 
             do
             {
                 Console.WriteLine("Enter temperature: ");
                 entry = Console.ReadLine();
 
-                bool success = int.TryParse(entry, out temp);
+                bool success = int.TryParse(entry, out parsedNum);
 
                 if (success)
                 {
-                    numTemp = temp;
-                    Console.WriteLine("String number successfully parsed");
+                    Console.WriteLine($"String number successfully parsed: {parsedNum}");
                 }
                 else
                 {
