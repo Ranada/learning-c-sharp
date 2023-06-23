@@ -19,12 +19,14 @@ namespace _4_64_TernaryOperatorTempCheck
 
                 if (entryIsInt)
                 {
-                    stateOfMatter = temp <= 15 ? "It is too cold here.\n" : temp >= 16 && temp <= 28 ? "It is ok\n" : "It is hot here.\n";
+                    stateOfMatter = temp <= 15 ? "It is too cold here.\n" :
+                                    temp > 28 ? "It is hot here.\n" :
+                                    temp >= 16 && temp <= 28 ? "It is ok\n" : "";
                     Console.WriteLine(stateOfMatter);
                 }
                 else
                 {
-                    Console.WriteLine("Not a valid temperature.");
+                    Console.WriteLine("Not a valid temperature.\n");
                 }
             }
             Console.WriteLine("Exiting program. Have a nice day!");
