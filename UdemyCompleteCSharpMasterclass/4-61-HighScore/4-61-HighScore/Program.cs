@@ -46,7 +46,7 @@ namespace _4_61_HighScore
                 Console.WriteLine("Please enter an integer for the score. Try again.\n");
             }   
         }
-
+        
         public static void ProcessScore(string player, int score)
         {
             if (score > highscore)
