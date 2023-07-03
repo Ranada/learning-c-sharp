@@ -1,4 +1,5 @@
-﻿using System.Transactions;
+﻿using System.Threading.Channels;
+using System.Transactions;
 
 namespace _4_61_HighScore
 {
@@ -11,7 +12,8 @@ namespace _4_61_HighScore
         static string highscorePlayer = "";
         static void Main(string[] args)
         {
-            while (gameOn) {
+            while (gameOn)
+            {
                 if (gameOn) GetPlayer();
                 if (gameOn) GetScore();
             }
@@ -26,25 +28,27 @@ namespace _4_61_HighScore
             if (player == "exit") gameOn = false;
         }
 
-        public static void GetScore() { 
+        public static void GetScore()
+        {
             Console.Write("Enter score: ");
             string scoreEntry = Console.ReadLine();
-            if (scoreEntry == "exit") {
+            if (scoreEntry == "exit")
+            {
                 gameOn = false;
                 return;
-            } 
+            }
             Console.WriteLine();
 
             bool success = int.TryParse(scoreEntry, out score);
-                
+
             if (success)
             {
                 ProcessScore(player, score);
-            } 
+            }
             else
             {
                 Console.WriteLine("Please enter an integer for the score. Try again.\n");
-            }   
+            }
         }
         
         public static void ProcessScore(string player, int score)
@@ -57,7 +61,8 @@ namespace _4_61_HighScore
                 Console.WriteLine($"New high score is {highscore}.");
                 Console.WriteLine($"New high score holder is {highscorePlayer}.\n");
             }
-            else {
+            else
+            {
                 Console.WriteLine($"The old highscore of {highscore} could not be broken and is still held by {highscorePlayer}.\n");
             }
         }
