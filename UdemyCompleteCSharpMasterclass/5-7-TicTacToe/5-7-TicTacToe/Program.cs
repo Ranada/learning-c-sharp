@@ -15,7 +15,7 @@
         public static void PrintBoard()
         {
             Console.WriteLine("     |     |    ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", 1, 2, 3);
+            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[0,0], board[0,1], board[0, 2]);
             Console.WriteLine("_____|_____|_____");
 
             Console.WriteLine("     |     |    ");
