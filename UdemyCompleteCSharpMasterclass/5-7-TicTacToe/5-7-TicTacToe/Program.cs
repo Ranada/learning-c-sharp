@@ -27,11 +27,11 @@
                     Console.WriteLine($"**** Player {currentPlayer} wins! *****\n");
                     return;
                 }
-                // Check if there is a winner
-                // If there is a winner, print a message for the winner and end the game
-                // If all the turnCount are used and there is no winner, print a message saying no one won, and reset the game
+           
             } while (turnCount < 9);
+
             PrintBoard();
+            Console.WriteLine("**** Draw! No One Wins ****\n");
         }
 
         public static void CheckCurrentPlayer()
