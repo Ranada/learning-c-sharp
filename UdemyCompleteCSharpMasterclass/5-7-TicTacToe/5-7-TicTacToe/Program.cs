@@ -9,6 +9,21 @@
                                         };
         static void Main(string[] args)
         {
+            bool continueGame = true;
+            int currentPlayer = 1;
+            
+            do
+            {
+                // Track number of turns
+                // Check player turn
+                // Ask current player to pick a number position on the game board
+                    // If it is player 1's turn, replace number with "X" for player 1 and increment the number of turns
+                    // If it is plasyter 2's turn, replace number with "O" for player 2 and increment the number of turns
+                // Print the updated game board
+                // Check if there is a winner
+                    // If there is a winner, print a message for the winner and end the game
+                // If all the turns are used and there is no winner, print a message saying no one won, and reset the game
+            } while (continueGame);
             PrintBoard();
         }
 
