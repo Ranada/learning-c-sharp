@@ -19,11 +19,11 @@
             Console.WriteLine("_____|_____|_____");
 
             Console.WriteLine("     |     |    ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", 4, 5, 6);
+            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[1, 0], board[1, 1], board[1, 2]);
             Console.WriteLine("_____|_____|_____");
 
             Console.WriteLine("     |     |    ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", 7, 8, 9);
+            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[2, 0], board[2, 1], board[2, 2]);
             Console.WriteLine("     |     |    ");
         }
     }
