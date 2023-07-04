@@ -17,17 +17,19 @@
 
             do
             {
-                PrintBoard();
                 CheckCurrentPlayer();
                 GetCurrentPlayerInput();
 
                 if (HaveWinner())
                 {
+                    Console.Clear();
                     PrintBoard();
                     Console.WriteLine($"**** Player {currentPlayer} wins! *****\n");
                     return;
                 }
-           
+
+                Console.Clear();
+
             } while (turnCount < 9);
 
             PrintBoard();
@@ -50,6 +52,7 @@
         {
             do
             {
+                PrintBoard();
                 Console.Write($"Player {currentPlayer}, pick an available numbered position (1 through 9): ");
                 input = Console.ReadLine()!;
                 if (input == null) input = "";
@@ -74,8 +77,9 @@
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("*** OOPS! You must enter an available number position between 0 and 9.***\n");
-                PrintBoard();
+
                 return false;
             }
 
@@ -92,8 +96,8 @@
                     (input == "9" && board[2, 2] != "9")
                     )
                 {
+                    Console.Clear();
                     Console.WriteLine("*** OOPS! This position is already filled. Select an available number position between 0 and 9. ***\n");
-                    PrintBoard();
                     return false;
                 }
 
