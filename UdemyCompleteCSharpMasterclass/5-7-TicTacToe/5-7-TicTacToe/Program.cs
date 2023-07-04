@@ -25,7 +25,9 @@
                     Console.Clear();
                     PrintBoard();
                     Console.WriteLine($"**** Player {currentPlayer} wins! *****\n");
-                    return;
+                    Console.WriteLine("Press 'ENTER' to reset the game.");
+                    Console.Read();
+                    ResetGame();
                 }
 
                 Console.Clear();
@@ -34,6 +36,9 @@
 
             PrintBoard();
             Console.WriteLine("**** Draw! No One Wins ****\n");
+            Console.WriteLine("Press 'ENTER' to reset the game.");
+            Console.Read();
+            ResetGame();
         }
 
         public static void CheckCurrentPlayer()
@@ -184,6 +189,17 @@
             }
 
             return false;
+        }
+
+        public static void ResetGame()
+        {
+            board = new [,] {
+                { "1", "2", "3"},
+                { "4", "5", "6"},
+                { "7", "8", "9"}
+            };
+
+            turnCount = 0;
         }
 
 
