@@ -4,7 +4,7 @@
     {
         public static int currentPlayer = 2;
         public static int turnCount = 0;
-        public static string input = "";
+        //public static string input = "";
 
         public static string[,] board = {
                                             {"1", "2", "3"},
@@ -17,28 +17,22 @@
 
             do
             {
+
+                Console.Clear();
                 CheckCurrentPlayer();
                 GetCurrentPlayerInput();
 
                 if (HaveWinner())
                 {
-                    Console.Clear();
-                    PrintBoard();
-                    Console.WriteLine($"**** Player {currentPlayer} wins! *****\n");
-                    Console.WriteLine("Press 'ENTER' to reset the game.");
-                    Console.Read();
                     ResetGame();
                 }
 
-                Console.Clear();
+                if (ReachMaxTurns())
+                {
+                    ResetGame();
+                }
 
             } while (turnCount < 9);
-
-            PrintBoard();
-            Console.WriteLine("**** Draw! No One Wins ****\n");
-            Console.WriteLine("Press 'ENTER' to reset the game.");
-            Console.Read();
-            ResetGame();
         }
 
         public static void CheckCurrentPlayer()
@@ -55,6 +49,8 @@
 
         public static void GetCurrentPlayerInput()
         {
+            string input = "";
+
             do
             {
                 PrintBoard();
@@ -62,13 +58,13 @@
                 input = Console.ReadLine()!;
                 if (input == null) input = "";
                 Console.WriteLine();
-            } while (!isValid(ref input));
+            } while (!isValid(input));
 
             UpdateBoard(input);
             turnCount++;
         }
 
-        public static bool isValid(ref string input)
+        public static bool isValid(string input)
         {
             bool isInteger = false;
             int number = 0;
@@ -128,11 +124,16 @@
             if (input == "9") board[2, 2] = gamePiece;
         }
 
-
         public static bool HaveWinner()
         {
             if (IsHorizontalWin() || IsVerticalWin() || IsDiagonalWin())
             {
+                Console.Clear();
+                PrintBoard();
+                Console.WriteLine($"**** Player {currentPlayer} wins! *****\n");
+                Console.WriteLine("Press ANY KEY to reset the game.");
+                Console.ReadKey();
+
                 return true;
             }
 
@@ -191,6 +192,21 @@
             return false;
         }
 
+        public static bool ReachMaxTurns()
+        {
+            if (turnCount == 9)
+            {
+                Console.Clear();
+                PrintBoard();
+                Console.WriteLine("**** Draw! No One Wins ****\n");
+                Console.WriteLine("Press ANY KEY to reset the game.");
+                Console.ReadKey();
+                return true;
+            }
+
+            return false;
+        }
+
         public static void ResetGame()
         {
             board = new [,] {
@@ -200,8 +216,9 @@
             };
 
             turnCount = 0;
-        }
 
+            Console.Clear();
+        }
 
         public static void PrintBoard()
         {
