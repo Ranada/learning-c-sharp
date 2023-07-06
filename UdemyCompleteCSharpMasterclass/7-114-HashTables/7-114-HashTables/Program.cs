@@ -6,7 +6,7 @@ namespace _7_114_HashTables
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Transfer of student gpa from array to hashtable: ");
+            Console.WriteLine("***Transfer of student gpa from array to hashtable***");
 
             Student[] students = new Student[5];
             students[0] = new Student(1, "Jon", 4.0f);
