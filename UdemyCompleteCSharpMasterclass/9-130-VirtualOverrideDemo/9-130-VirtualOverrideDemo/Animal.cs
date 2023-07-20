@@ -16,6 +16,7 @@ namespace _9_130_VirtualOverrideDemo
         {
             _name = name;
             _age = age;
+            _isHungry = true;
         }
 
         public string Name
@@ -30,23 +31,32 @@ namespace _9_130_VirtualOverrideDemo
             set => _age = value;
         }
 
-        public void MakeSound()
+        public bool IsHungry
+        { 
+            get => _isHungry;
+            set => _isHungry = value;
+        }
+
+        public virtual void MakeSound()
         {
             Console.WriteLine("Animal Sound!");
         }
 
-        public void Eat()
+        public virtual void Eat()
         {
-            Console.WriteLine("Eating");
+            if (IsHungry)
+            {
+                Console.WriteLine($"{Name} is eating");
+            }
+            else
+            {
+                Console.WriteLine($"{Name} is not hungry.");
+            }
         }
 
-        public void Play()
+        public virtual void Play()
         {
-            Console.WriteLine("Playing");
+            Console.WriteLine($"{Name} is playing");
         }
-
-
-
-
     }
 }
