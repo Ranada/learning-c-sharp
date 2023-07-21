@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _9_130_VirtualOverrideDemo
 {
-    internal class Animal
+    public class Animal
     {
         private string _name;
         private int _age;
