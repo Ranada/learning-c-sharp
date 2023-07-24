@@ -70,7 +70,10 @@
             {
                 GetImagePost(username);
             }
-
+            if (entry.ToLower().Equals("video"))
+            {
+                GetVideoPost(username);
+            }
         }
         static void GetTextPost(string username)
         {
@@ -107,10 +110,30 @@
 
             Display(post);
         }
+        static void GetVideoPost(string username)
+        {
+            VideoPost post = new VideoPost();
+
+            Console.Write("Enter post title: ");
+            post.Title = Console.ReadLine();
+
+            Console.Write("Enter text: ");
+            post.Text = Console.ReadLine();
+
+            Console.Write("Enter video URL: ");
+            post.VideoURL = Console.ReadLine();
+
+            post.Author = username;
+
+            post.Date = DateTime.Now.ToString("M/d/yyyy");
+
+            Display(post);
+        }
 
         static void Display(GeneralPost post)
         {
             Console.WriteLine("GENERAL POST");
+            Console.WriteLine("ID: {0}", post.Id);
             Console.WriteLine("Title: {0}", post.Title);
             Console.WriteLine("Text: {0}", post.Text);
             Console.WriteLine("Posted by: {0}", post.Author);
@@ -119,10 +142,21 @@
         static void Display(ImagePost post)
         {
             Console.WriteLine("IMAGE POST");
+            Console.WriteLine("ID: {0}", post.Id);
             Console.WriteLine("Title: {0}", post.Title);
             Console.WriteLine("Text: {0}", post.Text);
+            Console.WriteLine("Image URL: {0}", post.ImageURL);
             Console.WriteLine("Posted by: {0}", post.Author);
-            Console.WriteLine("Posted by: {0}", post.ImageURL);
+            Console.WriteLine("Date created: {0}", post.Date);
+        }
+        static void Display(VideoPost post)
+        {
+            Console.WriteLine("IMAGE POST");
+            Console.WriteLine("ID: {0}", post.Id);
+            Console.WriteLine("Title: {0}", post.Title);
+            Console.WriteLine("Text: {0}", post.Text);
+            Console.WriteLine("Video URL: {0}", post.VideoURL);
+            Console.WriteLine("Posted by: {0}", post.Author);
             Console.WriteLine("Date created: {0}", post.Date);
         }
     }

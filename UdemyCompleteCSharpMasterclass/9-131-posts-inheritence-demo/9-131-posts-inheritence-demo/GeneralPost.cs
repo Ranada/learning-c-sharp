@@ -8,7 +8,7 @@ namespace _9_131_posts_inheritence_demo
 {
     class GeneralPost
     {
-        private int _id = 0;
+        private static int _id = 0;
         private string? _title = "";
         private string? _text = "";
         private string? _author = "";

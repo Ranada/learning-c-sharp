@@ -13,7 +13,7 @@ namespace _9_131_posts_inheritence_demo
         public ImagePost() : base() { 
         }
 
-        public string ImageURL
+        public string? ImageURL
         {
             get => _imageURL;
             set => _imageURL = value;
