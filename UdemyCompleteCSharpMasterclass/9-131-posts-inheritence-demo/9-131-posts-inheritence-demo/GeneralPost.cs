@@ -44,5 +44,14 @@ namespace _9_131_posts_inheritence_demo
             get => _date;
             set => _date = value;
         }
+        public virtual void Display()
+        {
+            Console.WriteLine("\nGENERAL POST");
+            Console.WriteLine("ID: {0}", this.Id);
+            Console.WriteLine("Title: {0}", this.Title);
+            Console.WriteLine("Text: {0}", this.Text);
+            Console.WriteLine("Posted by: {0}", this.Author);
+            Console.WriteLine("Date created: {0}", this.Date);
+        }
     }
 }
