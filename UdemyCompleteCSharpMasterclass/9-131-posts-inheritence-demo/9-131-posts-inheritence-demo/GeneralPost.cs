@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _9_131_posts_inheritence_demo
 {
-    internal class GeneralPost
+    class GeneralPost
     {
         private int _id = 0;
         private string? _title = "";
@@ -14,9 +14,9 @@ namespace _9_131_posts_inheritence_demo
         private string? _author = "";
         private string _date = "";
 
-        public GeneralPost(string author) {
+        public GeneralPost() {
             _id += 1;
-            _author = author;
+            //_author = author;
         }
 
         public int Id

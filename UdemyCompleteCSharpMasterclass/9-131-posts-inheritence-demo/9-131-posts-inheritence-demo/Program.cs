@@ -66,10 +66,15 @@
             {
                 GetTextPost(username);
             }
+            if (entry.ToLower().Equals("image"))
+            {
+                GetImagePost(username);
+            }
+
         }
         static void GetTextPost(string username)
         {
-            GeneralPost post = new GeneralPost(username);
+            GeneralPost post = new GeneralPost();
             
             Console.Write("Enter post title: ");
             post.Title = Console.ReadLine();
@@ -81,13 +86,45 @@
 
             post.Date = DateTime.Now.ToString("M/d/yyyy");
 
-            Console.WriteLine("NEW POST");
+            Display(post);
+        }
+        static void GetImagePost(string username)
+        {
+            ImagePost post = new ImagePost();
+
+            Console.Write("Enter post title: ");
+            post.Title = Console.ReadLine();
+
+            Console.Write("Enter text: ");
+            post.Text = Console.ReadLine();
+
+            Console.Write("Enter image URL: ");
+            post.ImageURL = Console.ReadLine();
+
+            post.Author = username;
+
+            post.Date = DateTime.Now.ToString("M/d/yyyy");
+
+            Display(post);
+        }
+
+        static void Display(GeneralPost post)
+        {
+            Console.WriteLine("GENERAL POST");
             Console.WriteLine("Title: {0}", post.Title);
-            Console.WriteLine(post.Text);
+            Console.WriteLine("Text: {0}", post.Text);
             Console.WriteLine("Posted by: {0}", post.Author);
             Console.WriteLine("Date created: {0}", post.Date);
         }
-
+        static void Display(ImagePost post)
+        {
+            Console.WriteLine("IMAGE POST");
+            Console.WriteLine("Title: {0}", post.Title);
+            Console.WriteLine("Text: {0}", post.Text);
+            Console.WriteLine("Posted by: {0}", post.Author);
+            Console.WriteLine("Posted by: {0}", post.ImageURL);
+            Console.WriteLine("Date created: {0}", post.Date);
+        }
     }
 }
 
