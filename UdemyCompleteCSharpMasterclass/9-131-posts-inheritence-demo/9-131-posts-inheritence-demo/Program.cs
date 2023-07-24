@@ -4,26 +4,9 @@
     {
         static void Main(string[] args)
         {
-            StartApp();
-            ManagePosts();
-
+            ManagePosts(GetUsername());
             Console.WriteLine("Exiting the program");
 
-            /*
-             * General Post
-             * - ID
-             * - Title
-             * - Author
-             * - Post date
-             * 
-             * Image post
-             * - Inherit general post
-             * - Image URL
-             * 
-             * Video post
-             * - Inherit general post
-             * 
-             */
         }
 
         static string Divider()
@@ -36,14 +19,15 @@
             return str;
         }
 
-        static void StartApp()
+        static string? GetUsername()
         {
             Console.Write("Enter your username: ");
             string? username = Console.ReadLine();
             Console.WriteLine($"***** Hi {username}, start creating posts!*****");
+            return username;
         }
 
-        static void ManagePosts()
+        static void ManagePosts(string? username)
         {
             string? entry = "";
 
@@ -55,15 +39,9 @@
                 entry = Console.ReadLine();
                 if (entry != null)
                 {
-                    if (isValid(entry))
+                    if (IsValid(entry))
                     {
-                        if (entry.ToLower().Equals("text")) 
-                        {
-                            Console.WriteLine("This is a text post");
-                            GeneralPost post = new GeneralPost("Text title", "Content text", "Some date");
-                            Console.WriteLine(post.Id);
-                            Console.WriteLine(post.Title);
-                        }
+                        Handle(entry, username);
                     }
                     else
                     {
@@ -73,7 +51,7 @@
             } while (entry != "q" && entry != "quit");
         }
 
-        static bool isValid(string entry)
+        static bool IsValid(string entry)
         {
             if (entry.ToLower() == "text" || entry.ToLower() == "image" || entry.ToLower() == "video")
             {
@@ -82,5 +60,49 @@
             return false;
         }
 
+        static void Handle(string entry, string username)
+        {
+            if (entry.ToLower().Equals("text"))
+            {
+                GetTextPost(username);
+            }
+        }
+        static void GetTextPost(string username)
+        {
+            GeneralPost post = new GeneralPost(username);
+            
+            Console.Write("Enter post title: ");
+            post.Title = Console.ReadLine();
+
+            Console.Write("Enter text: ");
+            post.Text = Console.ReadLine();
+
+            post.Author = username;
+
+            post.Date = DateTime.Now.ToString("M/d/yyyy");
+
+            Console.WriteLine("NEW POST");
+            Console.WriteLine("Title: {0}", post.Title);
+            Console.WriteLine(post.Text);
+            Console.WriteLine("Posted by: {0}", post.Author);
+            Console.WriteLine("Date created: {0}", post.Date);
+        }
+
     }
 }
+
+/*
+    * General Post
+    * - ID
+    * - Title
+    * - Author
+    * - Post date
+    * 
+    * Image post
+    * - Inherit general post
+    * - Image URL
+    * 
+    * Video post
+    * - Inherit general post
+    * 
+    */
