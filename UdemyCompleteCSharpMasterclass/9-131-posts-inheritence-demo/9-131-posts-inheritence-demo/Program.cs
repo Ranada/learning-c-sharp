@@ -1,4 +1,5 @@
-﻿namespace _9_131_posts_inheritence_demo
+﻿using Xunit;
+namespace _9_131_posts_inheritence_demo
 {
     internal class Program
     {
@@ -7,7 +8,6 @@
             ManagePosts(GetUsername());
             Console.WriteLine("Exiting the program");
         }
-
         static string Divider()
         {
             string str = "";
