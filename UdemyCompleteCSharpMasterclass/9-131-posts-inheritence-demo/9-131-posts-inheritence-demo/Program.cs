@@ -1,7 +1,7 @@
 ﻿using Xunit;
 namespace _9_131_posts_inheritence_demo
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -128,6 +128,8 @@ namespace _9_131_posts_inheritence_demo
 
             post.Display();
         }
+        [Fact]
+        public void DemoTestMethod() { }
     }
 }
 
