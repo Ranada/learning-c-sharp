@@ -5,7 +5,9 @@ namespace _22_295_FlightBookingUnitTests
         [Fact]
         public void Test1()
         {
-
+            var flight = new Flight(seatCapacity: 3);
+            flight.Book("neil.ranada@outlook.com", 1);
+            flight.RemainingNumberOfSeats.ShouldBe(2);
         }
     }
 }
