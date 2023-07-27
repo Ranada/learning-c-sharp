@@ -9,7 +9,9 @@
 
         public void Book(string email, int seats)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Confirmation email sent to {email} for {seats} seats booked.");
+            RemainingNumberOfSeats -= seats;
+            Console.WriteLine($"{RemainingNumberOfSeats} seats left.");
         }
 
         public int RemainingNumberOfSeats
