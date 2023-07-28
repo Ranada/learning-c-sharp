@@ -20,6 +20,7 @@ namespace Domain
             Console.WriteLine($"Confirmation email sent to {email} for {numberOfSeats} seats booked.");
             RemainingNumberOfSeats -= numberOfSeats;
             Console.WriteLine($"{RemainingNumberOfSeats} seats left.");
+            BookingsList.Add(new Booking(email, numberOfSeats));
             return null;
         }
 

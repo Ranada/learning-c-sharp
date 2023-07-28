@@ -12,8 +12,8 @@ namespace Domain
         public int NumberOfSeats { get; set; }
         public Booking(string email, int numberOfSeats)
         {
-            Email = email;
-            NumberOfSeats = numberOfSeats;
+            this.Email = email;
+            this.NumberOfSeats = numberOfSeats;
         }
     }
 }
