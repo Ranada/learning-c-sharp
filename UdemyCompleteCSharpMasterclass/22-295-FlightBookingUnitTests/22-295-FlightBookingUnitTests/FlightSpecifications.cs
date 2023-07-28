@@ -61,5 +61,14 @@ namespace _22_295_FlightBookingUnitTests
             flight.Cancel(email: "neil.ranada@gmail.com", numberOfSeats: seatsCancelled);
             flight.RemainingNumberOfSeats.Should().Be(seatsLeft);
         }
+
+        [Fact]
+        public void Doesnt_cancel_bookings_for_passengers_who_have_not_booked()
+        {
+            var flight = new Flight(seatCapacity: 100);
+            var error = flight.Cancel(email: "neil.ranada@gmail.com", numberOfSeats: 2);
+            Console.WriteLine(error);
+            error.Should().BeOfType<BookingNotFoundError>();
+        }
     }
 }

@@ -25,9 +25,10 @@ namespace Domain
             return null;
         }
 
-        public void Cancel(string email, int numberOfSeats)
+        public Object? Cancel(string email, int numberOfSeats)
         {
             RemainingNumberOfSeats += numberOfSeats;
+            return null;
         }
 
         public int RemainingNumberOfSeats
