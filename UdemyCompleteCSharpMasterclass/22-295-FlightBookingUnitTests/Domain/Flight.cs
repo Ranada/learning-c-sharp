@@ -1,4 +1,6 @@
-﻿namespace Domain
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Domain
 {
     public class Flight
     {
@@ -8,11 +10,16 @@
             RemainingNumberOfSeats = seatCapacity;
         }
 
-        public void Book(string email, int numberOfSeats)
+        public object? Book(string email, int numberOfSeats)
         {
+            if (numberOfSeats > this.RemainingNumberOfSeats)
+            {
+                return new OverbookingError();
+            }
             Console.WriteLine($"Confirmation email sent to {email} for {numberOfSeats} seats booked.");
             RemainingNumberOfSeats -= numberOfSeats;
             Console.WriteLine($"{RemainingNumberOfSeats} seats left.");
+            return null;
         }
 
         public int RemainingNumberOfSeats
