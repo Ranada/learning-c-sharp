@@ -1,12 +1,12 @@
-using Domain.Tests;
+using Domain;
 using FluentAssertions;
 
 namespace _22_295_FlightBookingUnitTests
 {
-    public class UnitTest1
+    public class FlightSpecifications
     {
         [Fact]
-        public void Book_1_seat_SeatCapacity_should_be_2()
+        public void Booking_reduces_the_number_of_seats()
         {
             var flight = new Flight(seatCapacity: 3);
             flight.Book("neil.ranada@outlook.com", 1);

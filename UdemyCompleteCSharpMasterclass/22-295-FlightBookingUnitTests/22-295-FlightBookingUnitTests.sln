@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22-295-FlightBookingUnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Tests", "Domain.Tests\Domain.Tests.csproj", "{23620F88-0819-48A6-8728-7E63E6B7952A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{82E40999-4D96-4DAD-B68F-C89159802241}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{23620F88-0819-48A6-8728-7E63E6B7952A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23620F88-0819-48A6-8728-7E63E6B7952A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23620F88-0819-48A6-8728-7E63E6B7952A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E40999-4D96-4DAD-B68F-C89159802241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E40999-4D96-4DAD-B68F-C89159802241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E40999-4D96-4DAD-B68F-C89159802241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E40999-4D96-4DAD-B68F-C89159802241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
