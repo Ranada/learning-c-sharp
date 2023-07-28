@@ -70,5 +70,14 @@ namespace _22_295_FlightBookingUnitTests
             Console.WriteLine(error);
             error.Should().BeOfType<BookingNotFoundError>();
         }
+
+        [Fact]
+        public void Returns_null_when_successfully_cancel_booking()
+        {
+            var flight = new Flight(seatCapacity: 100);
+            var error = flight.Cancel(email: "neil.ranada@gmail.com", numberOfSeats: 2);
+            Console.WriteLine(error);
+            error.Should().BeNull();
+        }
     }
 }

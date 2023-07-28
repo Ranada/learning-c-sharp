@@ -28,7 +28,7 @@ namespace Domain
         public Object? Cancel(string email, int numberOfSeats)
         {
             RemainingNumberOfSeats += numberOfSeats;
-            return null;
+            return new BookingNotFoundError();
         }
 
         public int RemainingNumberOfSeats
