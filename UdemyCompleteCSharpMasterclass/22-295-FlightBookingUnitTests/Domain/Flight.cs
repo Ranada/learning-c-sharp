@@ -4,6 +4,7 @@ namespace Domain
 {
     public class Flight
     {
+        public List<Booking> BookingsList { get; set; } = new List<Booking>();
         private int _remainingNumberOfSeats;
         public Flight(int seatCapacity)
         {

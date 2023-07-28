@@ -36,5 +36,18 @@ namespace _22_295_FlightBookingUnitTests
             var error = flight.Book("neil.ranada@gmail.com", 1);
             error.Should().BeNull();
         }
+
+        [Fact]
+        public void Remember_booked_flights()
+        {
+            // Given a flight with seat capacity
+            var flight = new Flight(seatCapacity: 150);
+
+            // When a new flight is booked
+            flight.Book(email: "neil.ranada@gmail.com", numberOfSeats: 5) ;
+
+            // Then a booked flight list tracks the flight
+            flight.BookingsList.Should().ContainEquivalentOf(new Booking("neil.ranada@gmail.com", 5));
+        }
     }
 }
