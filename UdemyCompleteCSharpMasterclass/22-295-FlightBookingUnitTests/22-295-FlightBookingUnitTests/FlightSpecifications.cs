@@ -49,5 +49,14 @@ namespace _22_295_FlightBookingUnitTests
             // Then a booked flight list tracks the flight
             flight.BookingsList.Should().ContainEquivalentOf(new Booking("neil.ranada@gmail.com", 5));
         }
+
+        [Fact]
+        public void Cancel_booking_frees_seats()
+        {
+            var flight = new Flight(seatCapacity: 150);
+            flight.Book(email: "neil.ranada@gmail.com", numberOfSeats: 5);
+            flight.Cancel(email: "neil.ranada@gmail.com", numberOfSeats: 4);
+            flight.RemainingNumberOfSeats.Should().Be(141);
+        }
     }
 }

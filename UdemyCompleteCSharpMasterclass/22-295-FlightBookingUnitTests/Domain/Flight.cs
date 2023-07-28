@@ -25,6 +25,11 @@ namespace Domain
             return null;
         }
 
+        public void Cancel(string email, int numberOfSeats)
+        {
+            throw new NotImplementedException();
+        }
+
         public int RemainingNumberOfSeats
         {
             get => _remainingNumberOfSeats;
