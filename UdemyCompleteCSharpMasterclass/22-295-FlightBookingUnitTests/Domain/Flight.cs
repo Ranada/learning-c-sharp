@@ -27,7 +27,7 @@ namespace Domain
 
         public void Cancel(string email, int numberOfSeats)
         {
-            throw new NotImplementedException();
+            RemainingNumberOfSeats += numberOfSeats;
         }
 
         public int RemainingNumberOfSeats
