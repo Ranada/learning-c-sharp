@@ -4,7 +4,8 @@ namespace Domain
 {
     public class Flight
     {
-        public List<Booking> BookingsList { get; set; } = new List<Booking>();
+        List<Booking> _bookingList { get; set; } = new List<Booking>();
+        public IEnumerable<Booking> BookingsList => _bookingList;
         private int _remainingNumberOfSeats;
         public Flight(int seatCapacity)
         {
@@ -20,7 +21,7 @@ namespace Domain
             Console.WriteLine($"Confirmation email sent to {email} for {numberOfSeats} seats booked.");
             RemainingNumberOfSeats -= numberOfSeats;
             Console.WriteLine($"{RemainingNumberOfSeats} seats left.");
-            BookingsList.Add(new Booking(email, numberOfSeats));
+            _bookingList.Add(new Booking(email, numberOfSeats));
             return null;
         }
 
