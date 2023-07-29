@@ -1,5 +1,6 @@
 using FluentAssertions;
-using System.Security.Cryptography.X509Certificates;
+using Data;
+using Domain;
 
 namespace App.Tests
 {
@@ -8,23 +9,28 @@ namespace App.Tests
         [Fact]
         public void Books_flights()
         {
-            var bookingService = new BookingService();
+            var entities = new Entities();
+            var flight = new Flight(3);
+            entities.Flights.Add(new Domain.Flight(3));
+
+            var bookingService = new BookingService(entities: entities);
 
             bookingService.Book(new BookDto(
-                flightId: Guid.NewGuid(), email: "neil.ranada@gmail.com", numberOfSeats: 2));
+                flightId: flight.Id, email: "neil.ranada@gmail.com", numberOfSeats: 2));
             
-            bookingService.FindBookings().Should().ContainEquivalentOf(new BookingRm(email: "neil.ranada@gmail.com", numberOfSeats: 2));
+            bookingService.FindBookings(flight.Id).Should().ContainEquivalentOf(new BookingRm(email: "neil.ranada@gmail.com", numberOfSeats: 2));
         }
     }
 
     public class BookingService
     {
+        public BookingService(Entities entities) { }
         public void Book(BookDto bookDto)
         {
 
         }
 
-        public IEnumerable<BookingRm> FindBookings()
+        public IEnumerable<BookingRm> FindBookings(Guid flightId)
         {
             return new[]
             {
