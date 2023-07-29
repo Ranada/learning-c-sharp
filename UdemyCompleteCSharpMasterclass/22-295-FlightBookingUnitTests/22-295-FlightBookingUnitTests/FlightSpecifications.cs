@@ -47,7 +47,7 @@ namespace _22_295_FlightBookingUnitTests
             flight.Book(email: "neil.ranada@gmail.com", numberOfSeats: 5) ;
 
             // Then a booked flight list tracks the flight
-            flight.BookingsList.Should().ContainEquivalentOf(new Booking("neil.ranada@gmail.com", 5));
+            flight.BookingList.Should().ContainEquivalentOf(new Booking("neil.ranada@gmail.com", 5));
         }
 
         [Theory]
@@ -67,7 +67,6 @@ namespace _22_295_FlightBookingUnitTests
         {
             var flight = new Flight(seatCapacity: 100);
             var error = flight.Cancel(email: "neil.ranada@gmail.com", numberOfSeats: 2);
-            Console.WriteLine(error);
             error.Should().BeOfType<BookingNotFoundError>();
         }
 
@@ -75,6 +74,7 @@ namespace _22_295_FlightBookingUnitTests
         public void Returns_null_when_successfully_cancel_booking()
         {
             var flight = new Flight(seatCapacity: 100);
+            flight.Book(email: "neil.ranada@gmail.com", numberOfSeats: 2);
             var error = flight.Cancel(email: "neil.ranada@gmail.com", numberOfSeats: 2);
             Console.WriteLine(error);
             error.Should().BeNull();

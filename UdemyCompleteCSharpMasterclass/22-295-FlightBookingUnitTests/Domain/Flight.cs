@@ -5,7 +5,7 @@ namespace Domain
     public class Flight
     {
         List<Booking> _bookingList { get; set; } = new List<Booking>();
-        public IEnumerable<Booking> BookingsList => _bookingList;
+        public IEnumerable<Booking> BookingList => _bookingList;
         private int _remainingNumberOfSeats;
         public Flight(int seatCapacity)
         {
@@ -27,8 +27,11 @@ namespace Domain
 
         public Object? Cancel(string email, int numberOfSeats)
         {
+            if (!BookingList.Any(booking => booking.Email == email))
+                return new BookingNotFoundError();
+
             RemainingNumberOfSeats += numberOfSeats;
-            return new BookingNotFoundError();
+            return null;
         }
 
         public int RemainingNumberOfSeats
