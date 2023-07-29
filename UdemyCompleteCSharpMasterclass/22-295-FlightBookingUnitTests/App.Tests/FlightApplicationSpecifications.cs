@@ -28,7 +28,8 @@ namespace App.Tests
         {
             return new[]
             {
-                new BookingRm(email: "random string", numberOfSeats: 5)
+                new BookingRm(email: "random string", numberOfSeats: 5),
+                new BookingRm(email: "neil.ranada@gmail.com", numberOfSeats: 2)
             };
         }
     }
