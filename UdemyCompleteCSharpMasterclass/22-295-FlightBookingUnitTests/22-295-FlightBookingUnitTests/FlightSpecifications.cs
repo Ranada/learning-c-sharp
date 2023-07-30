@@ -1,7 +1,7 @@
 using Domain;
 using FluentAssertions;
 
-namespace _22_295_FlightBookingUnitTests
+namespace App
 {
     public class FlightSpecifications
     {
