@@ -22,5 +22,15 @@ namespace App
                 .Find(flightId).BookingList
                 .Select(booking => new BookingRm(booking.Email, booking.NumberOfSeats));
         }
+
+        public void CancelBooking(CancelBookingDto cancelBooking)
+        {
+
+        }
+
+        public object GetRemainingNumberOfSeatsFor(Guid id)
+        {
+            return 3;
+        }
     }
 }
