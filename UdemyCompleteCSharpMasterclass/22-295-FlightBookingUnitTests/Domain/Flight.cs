@@ -23,9 +23,9 @@ namespace Domain
             {
                 return new OverbookingError();
             }
-            Console.WriteLine($"Confirmation email sent to {email} for {numberOfSeats} seats booked.");
+
             RemainingNumberOfSeats -= numberOfSeats;
-            Console.WriteLine($"{RemainingNumberOfSeats} seats left.");
+
             _bookingList.Add(new Booking(email, numberOfSeats));
             return null;
         }

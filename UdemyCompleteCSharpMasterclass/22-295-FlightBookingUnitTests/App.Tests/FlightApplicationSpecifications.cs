@@ -7,45 +7,59 @@ namespace App.Tests
 {
     public class FlightApplicationSpecifications
     {
-        [Fact]
-        public void Books_flights()
+        [Theory]
+        [InlineData("name@email.com", 2)]
+        [InlineData("other@email.com", 2)]
+        public void Books_flights(string email, int numberOfSeats)
         {
-            var entities = new Entities(new DbContextOptionsBuilder<Entities>().UseInMemoryDatabase("Flights").Options);
-            var flight = new Flight(3);
-            entities.Flights.Add(new Domain.Flight(3));
+            var entities = new Entities(new DbContextOptionsBuilder<Entities>()
+                .UseInMemoryDatabase("Flights")
+                .Options);
+            
+            var flight = new Flight(100);
+            
+            entities.Flights.Add(flight);
 
             var bookingService = new BookingService(entities: entities);
 
-            bookingService.Book(new BookDto(
-                flightId: flight.Id, email: "neil.ranada@gmail.com", numberOfSeats: 2));
+            bookingService.Book(new BookDto(flight.Id, email, numberOfSeats));
             
-            bookingService.FindBookings(flight.Id).Should().ContainEquivalentOf(new BookingRm(email: "neil.ranada@gmail.com", numberOfSeats: 2));
+            bookingService.FindBookings(flight.Id).Should().ContainEquivalentOf(
+                new BookingRm(email, numberOfSeats));
         }
     }
 
     public class BookingService
     {
-        public BookingService(Entities entities) { }
+        public Entities Entities { get; set; }
+        public BookingService(Entities entities) {
+            Entities = entities;
+        }
         public void Book(BookDto bookDto)
         {
-
+            var flight = Entities.Flights.Find(bookDto.FlightId);
+            flight.Book(bookDto.Email, bookDto.NumberOfSeats);
+            Entities.SaveChanges();
         }
 
         public IEnumerable<BookingRm> FindBookings(Guid flightId)
         {
-            return new[]
-            {
-                new BookingRm(email: "random string", numberOfSeats: 5),
-                new BookingRm(email: "neil.ranada@gmail.com", numberOfSeats: 2)
-            };
+            return Entities.Flights
+                .Find(flightId).BookingList
+                .Select(booking => new BookingRm(booking.Email, booking.NumberOfSeats));
         }
     }
 
     public class BookDto
     {
+        public Guid FlightId { get; set; }
+        public string Email { get; set; }
+        public int NumberOfSeats { get; set; }
         public BookDto(Guid flightId, string email, int numberOfSeats)
         {
-
+            FlightId = flightId;
+            Email = email;
+            NumberOfSeats = numberOfSeats;
         }
     }
 
