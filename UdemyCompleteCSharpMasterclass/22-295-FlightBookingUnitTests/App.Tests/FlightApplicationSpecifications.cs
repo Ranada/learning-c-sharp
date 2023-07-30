@@ -23,7 +23,7 @@ namespace App.Tests
         [Theory]
         [InlineData("name@email.com", 2)]
         [InlineData("other@email.com", 2)]
-        public void Books_flights(string email, int numberOfSeats)
+        public void Remembers_flight_bookings(string email, int numberOfSeats)
         {
             var flight = new Flight(100);
 
@@ -38,7 +38,7 @@ namespace App.Tests
         [Theory]
         [InlineData(3)]
         [InlineData(10)]
-        public void Cancels_booking(int initialCapacity)
+        public void Frees_up_seats_after_flight_cancellation(int initialCapacity)
         {
             var flight = new Flight(initialCapacity);
             entities.Flights.Add(flight);
