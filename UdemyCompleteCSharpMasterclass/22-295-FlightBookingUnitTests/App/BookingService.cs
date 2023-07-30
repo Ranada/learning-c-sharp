@@ -23,14 +23,15 @@ namespace App
                 .Select(booking => new BookingRm(booking.Email, booking.NumberOfSeats));
         }
 
-        public void CancelBooking(CancelBookingDto cancelBooking)
+        public void CancelBooking(CancelBookingDto cancelBookingDto)
         {
-
+            var flight = Entities.Flights.Find(cancelBookingDto.FlightId);
+            flight.Cancel(cancelBookingDto.Email, cancelBookingDto.NumberOfSeats);
         }
 
-        public object GetRemainingNumberOfSeatsFor(Guid id)
+        public object GetRemainingNumberOfSeatsFor(Guid flightId)
         {
-            return 3;
+            return Entities.Flights.Find(flightId).RemainingNumberOfSeats;
         }
     }
 }

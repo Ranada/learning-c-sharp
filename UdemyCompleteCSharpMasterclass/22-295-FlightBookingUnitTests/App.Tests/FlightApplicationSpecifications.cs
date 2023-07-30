@@ -37,6 +37,7 @@ namespace App.Tests
 
         [Theory]
         [InlineData(3)]
+        [InlineData(10)]
         public void Cancels_booking(int initialCapacity)
         {
             var flight = new Flight(initialCapacity);
