@@ -6,6 +6,9 @@
         {
             Cube cube = new Cube(5);
             cube.GetInfo();
+
+            Sphere sphere = new Sphere(100);
+            sphere.GetInfo();
         }
     }
 }
