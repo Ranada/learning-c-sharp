@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace _10_145_AbstractClasses
 {
-    class Shape
+    abstract class Shape
     {
+        public string? Name { get; set; }
+        
+        public virtual void GetInfo()
+        {
+            Console.WriteLine($"\nThis a {Name}");
+        }
+
+        public abstract double Volume();
     }
 }

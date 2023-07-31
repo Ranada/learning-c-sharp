@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Cube cube = new Cube(5);
+            cube.GetInfo();
         }
     }
 }
