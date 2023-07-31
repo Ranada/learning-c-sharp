@@ -23,6 +23,10 @@
             {
                 car.ShowDetails();
                 car.Repair();
+
+                Random rnd = new Random();
+                car.SetCarInfo(rnd.Next(0, 100), "Neil");
+                car.DisplayInfo();
             }
         }
     }

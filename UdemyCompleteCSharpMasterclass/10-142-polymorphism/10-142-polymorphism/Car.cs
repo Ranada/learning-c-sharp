@@ -11,6 +11,21 @@ namespace _10_142_polymorphism
         public string HP { get; set; }
         public string Color { get; set; }
 
+        // Has-a class relationship example
+        CarInfo carInfo = new CarInfo();
+
+        public void SetCarInfo(int id, string owner)
+        {
+            carInfo.Id = id;
+            carInfo.Owner = owner;
+        }
+
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Id: {carInfo.Id}, Owner: {carInfo.Owner}");
+        }
+
+
         public Car(string hp, string color)
         {
             HP = hp;
