@@ -20,8 +20,9 @@ namespace _10_142_polymorphism
         {
             Console.WriteLine($"{Brand} {Model}, {HP} horsepower, {Color}");
         }
-
-        public override void Repair()
+        
+        // Sealed keyword prevents child classes from overriding Repair method
+        public sealed override void Repair()
         {
             Console.WriteLine($"{Brand} {Model} was repaired!");
         }
