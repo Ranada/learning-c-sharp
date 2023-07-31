@@ -8,7 +8,7 @@ namespace _10_145_AbstractClasses
 {
     internal class Sphere : Shape
     {
-        public int Radius { get; set; }
+        public double Radius { get; set; }
 
         public Sphere(int radius)
         { 
@@ -17,13 +17,13 @@ namespace _10_145_AbstractClasses
         }
         public override double Volume()
         {
-            return (4/3) * Math.PI * Radius;
+            return (4/3) * Math.PI * Math.Pow(Radius, 3);
         }
 
         public override void GetInfo() 
         { 
             base.GetInfo();
-            Console.WriteLine($"The volume of {Name} is {Volume()}");
+            Console.WriteLine($"The {Name} has a radius of {Radius}");
         }
     }
 }

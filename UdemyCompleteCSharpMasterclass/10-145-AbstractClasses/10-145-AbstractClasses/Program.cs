@@ -4,11 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Cube cube = new Cube(5);
-            cube.GetInfo();
-
-            Sphere sphere = new Sphere(100);
-            sphere.GetInfo();
+            List<Shape> shapes = new List<Shape>();
+            shapes.Add(new Cube(5));
+            shapes.Add(new Sphere(100));
+            
+            foreach (Shape shape in shapes)
+            {
+                shape.GetInfo();
+                Console.WriteLine($"The {shape.Name} has a volume of {shape.Volume()}");
+            }
         }
     }
 }
