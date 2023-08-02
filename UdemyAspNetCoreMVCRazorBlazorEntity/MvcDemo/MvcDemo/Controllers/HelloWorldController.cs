@@ -13,7 +13,10 @@ namespace MvcDemo.Controllers
 
         public IActionResult Hello()
         {
-            return View();
+            DogViewModel doge = new DogViewModel();
+            doge.Name = "Shiba";
+            doge.Age = 5;
+            return View(doge);
         }
     }
 }
