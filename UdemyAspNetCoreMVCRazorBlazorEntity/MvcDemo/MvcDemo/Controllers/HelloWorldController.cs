@@ -11,6 +11,11 @@ namespace MvcDemo.Controllers
             return View(doggo);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         public IActionResult Hello()
         {
             DogViewModel doge = new DogViewModel();
