@@ -9,9 +9,9 @@ namespace MvcDemo.Controllers
             return View();
         }
 
-        public string Hello()
+        public IActionResult Hello()
         {
-            return "Who's there?";
+            return View();
         }
     }
 }
