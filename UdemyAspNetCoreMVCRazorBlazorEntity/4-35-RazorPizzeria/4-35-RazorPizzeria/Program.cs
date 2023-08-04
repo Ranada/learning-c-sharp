@@ -1,3 +1,6 @@
+using _4_35_RazorPizzeria.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace _4_35_RazorPizzeria
 {
     public class Program
@@ -7,6 +10,12 @@ namespace _4_35_RazorPizzeria
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
