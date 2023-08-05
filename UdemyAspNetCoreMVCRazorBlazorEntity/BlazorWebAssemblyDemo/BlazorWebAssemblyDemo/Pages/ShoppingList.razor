@@ -1,7 +1,43 @@
 ﻿@page "/shoppinglist";
+@using BlazorWebAssemblyDemo.Data;
 
 <h3>ShoppingList</h3>
 
+<div class="mb-2">
+    <input type="text" placeholder="Enter grocery name" @bind="groceryName" />
+    <input type="number" placeholder="Enter price" @bind="groceryPrice" />
+    <button class="btn btn-primary" @onclick="AddGrocery">Add Grocery</button>
+</div>
+
+<ul>
+    @foreach (Grocery grocery in groceries)
+    {
+        <li>
+            @grocery.Name, $@grocery.Price.ToString("0.00")
+        </li>
+    }
+</ul>
+<h3>Total: $@totalPrice.ToString("0.00")</h3>
+
+
+
 @code {
+    private string groceryName;
+    private decimal groceryPrice;
+    private decimal totalPrice = 0;
+
+    private List<Grocery> groceries = new List<Grocery>();
+
+    public void AddGrocery()
+    {
+        if (!string.IsNullOrWhiteSpace(groceryName) && groceryPrice > 0)
+        {
+            Grocery grocery = new Grocery(groceryName, groceryPrice);
+            groceries.Add(grocery);
+            totalPrice += groceryPrice;
+        }
+    }
+
 
 }
+
