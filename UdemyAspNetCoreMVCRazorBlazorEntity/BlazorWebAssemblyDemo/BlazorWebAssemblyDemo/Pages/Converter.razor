@@ -3,9 +3,9 @@
 <h3>Converter</h3>
 
 <label>KG</label>
-<input type="number" @bind="@Kilos" />
+<input type="number" @bind-value="@Kilos" @bind-value:event="oninput" />
 <span> = </span>
-<input type="number" @bind="@Grams" />
+<input type="number" @bind-value="@Grams" @bind-value:event="oninput" />
 <label>g</label>
 
 @code {
