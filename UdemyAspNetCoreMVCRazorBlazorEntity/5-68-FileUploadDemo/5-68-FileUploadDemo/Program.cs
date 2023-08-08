@@ -1,4 +1,5 @@
 using _5_68_FileUploadDemo.Data;
+using _5_68_FileUploadDemo.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -14,6 +15,7 @@ namespace _5_68_FileUploadDemo
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<WeatherForecastService>();
+            builder.Services.AddScoped<IFileUpload, FileUpload>();
 
             var app = builder.Build();
 
