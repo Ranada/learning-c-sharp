@@ -3,20 +3,41 @@
 
 <h3>ShoppingList</h3>
 
-<div class="mb-2">
+<EditForm Model="@grocery" OnSubmit="AddGrocery">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div>
+        <label>Name</label>
+        <InputText @bind-Value="grocery.Name"></InputText>
+    </div>
+    <div>
+        <label>Price</label>
+        <InputNumber @bind-Value="grocery.Price"></InputNumber>
+    </div>
+    <div>
+        <button type="submit">Add Grocery</button>
+    </div>
+</EditForm>
+
+
+@*<div class="mb-2">
     <input type="text" placeholder="Enter grocery name" @bind="groceryName" />
     <input type="number" placeholder="Enter price" @bind="groceryPrice" />
     <button class="btn btn-primary" @onclick="AddGrocery">Add Grocery</button>
 </div>
-
-<ul>
-    @foreach (Grocery grocery in groceries)
+*@
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th class="">Action</th>
+    </tr>
+    @foreach(var grocery in groceries)
     {
-        <li>
-            @grocery.Name, $@grocery.Price.ToString("0.00")
-        </li>
+        <Item GroceryItem="@grocery" OnGroceryPriceIncreased="OnGroceryPriceIncreased"></Item>       
     }
-</ul>
+</table>
+
 <h3>Total: $@totalPrice.ToString("0.00")</h3>
 
 
@@ -25,21 +46,25 @@
     private string groceryName;
     private decimal groceryPrice;
     private decimal totalPrice = 0;
-
+    private Grocery grocery = new Grocery();
     private List<Grocery> groceries = new List<Grocery>();
 
     public void AddGrocery()
     {
-        if (!string.IsNullOrWhiteSpace(groceryName) && groceryPrice > 0)
-        {
-            Grocery grocery = new Grocery(groceryName, groceryPrice);
-            groceries.Add(grocery);
-            totalPrice += groceryPrice;
-        }
-        groceryName = string.Empty;
-        groceryPrice = 0;
+        groceries.Add(grocery);
+        grocery = new();
+
+        UpdateTotalAmount();
     }
 
+    public void UpdateTotalAmount()
+    {
+        totalPrice = groceries.Sum(item => item.Price);
+    }
 
+    public void OnGroceryPriceIncreased()
+    {
+        UpdateTotalAmount();    
+    }
 }
 
