@@ -8,16 +8,16 @@
         <InputFile OnChange="OnInputFileChange" multiple class="mb-2" />
         <button class="btn btn-sm btn-success" type="button" @onclick="UploadFiles">Upload</button>
     </div>
-    <div>
-        <label>@labelText</label>
-    </div>
     @{
         var progressCSS = "progress" + (displayProgress? "" : " d-none");
     }
     <div class="@progressCSS">
-        <div class="progress-bar" style="width: 50%" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
-            50%
+        <div class="progress-bar" style="width: @uploadPercent%" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="@uploadPercent">
+            @uploadPercent"%"
         </div>
+    </div>
+    <div>
+        <label>@labelText</label>
     </div>
 </div>
 
@@ -25,6 +25,7 @@
     IReadOnlyList<IBrowserFile> selectedFiles;
     private string labelText = "";
     private bool displayProgress = false;
+    private int uploadPercent = 0;
 
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
@@ -43,11 +44,19 @@
         {
             if (selectedFiles is not null && selectedFiles.Count > 0)
             {
+                displayProgress = true;
+                int filesUploaded = 0;
+
+                labelText = $"{filesUploaded} of {selectedFiles.Count}";
+
                 foreach (var file in selectedFiles)
                 {
-                    await fileUpload.UploadFile(file);            
+                    await fileUpload.UploadFile(file);
+                    filesUploaded += 1;
+                    uploadPercent = (int)((filesUploaded / (double)selectedFiles.Count) * 100);
+                    labelText = $"{filesUploaded} of {selectedFiles.Count}";
                 }
-                labelText = $"Upload of {selectedFiles.Count} files successful!";
+
             }
         } catch (Exception ex)
         {
