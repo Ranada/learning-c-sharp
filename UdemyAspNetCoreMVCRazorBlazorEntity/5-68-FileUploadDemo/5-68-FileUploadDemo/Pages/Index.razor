@@ -11,7 +11,10 @@
     <div>
         <label>@labelText</label>
     </div>
-    <div class="progress">
+    @{
+        var progressCSS = "progress" + (displayProgress? "" : " d-none");
+    }
+    <div class="@progressCSS">
         <div class="progress-bar" style="width: 50%" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
             50%
         </div>
@@ -21,6 +24,8 @@
 @code {
     IReadOnlyList<IBrowserFile> selectedFiles;
     private string labelText = "";
+    private bool displayProgress = false;
+
     private void OnInputFileChange(InputFileChangeEventArgs e)
     {
         selectedFiles = new List<IBrowserFile>();
