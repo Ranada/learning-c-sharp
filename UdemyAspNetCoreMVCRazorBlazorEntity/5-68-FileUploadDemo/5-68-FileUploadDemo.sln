@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-68-FileUploadDemo", "5-68-FileUploadDemo\5-68-FileUploadDemo.csproj", "{073B6680-05A0-4085-815B-1122C952A38B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5-68-FileUploadDemo", "5-68-FileUploadDemo\5-68-FileUploadDemo.csproj", "{073B6680-05A0-4085-815B-1122C952A38B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

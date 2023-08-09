@@ -16,6 +16,7 @@ namespace _5_68_FileUploadDemo
             builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<WeatherForecastService>();
             builder.Services.AddScoped<IFileUpload, FileUpload>();
+            builder.Services.AddScoped<IFileDownload, FileDownload>();
 
             var app = builder.Build();
 
