@@ -16,9 +16,9 @@ namespace MVCLibrary.Models
                     return;
                 }
                 context.Book.AddRange(
-                    new Book { Title = "Cat in the Hat", CallNumber = "ASDF1234" },
-                    new Book { Title = "Green Eggs and Ham", CallNumber = "ASDF3456" },
-                    new Book { Title = "The Grinch Who Stole Christmas", CallNumber = "ASDF7800" }
+                    new Book { Title = "Cat in the Hat", Author = "Dr. Suess", CallNumber = "ASDF1234" },
+                    new Book { Title = "Green Eggs and Ham", Author = "Dr. Suess", CallNumber = "ASDF3456" },
+                    new Book { Title = "The Grinch Who Stole Christmas", Author = "Dr. Suess", CallNumber = "ASDF7800" }
                     );
                 context.SaveChanges();
             }
