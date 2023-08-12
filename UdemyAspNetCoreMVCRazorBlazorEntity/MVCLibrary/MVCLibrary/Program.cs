@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MVCLibrary.Data;
 namespace MVCLibrary
 {
     public class Program
@@ -5,6 +8,8 @@ namespace MVCLibrary
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<LibraryContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryContext") ?? throw new InvalidOperationException("Connection string 'LibraryContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
