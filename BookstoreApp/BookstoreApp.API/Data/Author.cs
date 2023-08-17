@@ -5,6 +5,9 @@ namespace BookstoreApp.API.Data;
 
 public partial class Author
 {
+    public Author() { 
+        Books = new List<Book>();
+    }
     public int Id { get; set; }
 
     public string? FirstName { get; set; }
