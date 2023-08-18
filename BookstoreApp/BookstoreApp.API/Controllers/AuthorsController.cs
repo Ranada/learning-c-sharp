@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BookstoreApp.API.Data;
 using BookstoreApp.API.Models.Author;
 using AutoMapper;
+using BookstoreApp.API.Static;
 
 namespace BookstoreApp.API.Controllers
 {
@@ -16,21 +17,32 @@ namespace BookstoreApp.API.Controllers
     public class AuthorsController : ControllerBase
     {
         private readonly BookStoreDbContext _context;
-        private readonly IMapper mapper;
+        private readonly IMapper _mapper;
+        private readonly ILogger _logger;
 
-        public AuthorsController(BookStoreDbContext context, IMapper mapper)
+        public AuthorsController(BookStoreDbContext context, IMapper mapper, ILogger<AuthorsController> logger)
         {
             _context = context;
-            this.mapper = mapper;
+            this._mapper = mapper;
+            this._logger = logger;
         }
 
         // GET: api/Authors
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AuthorReadOnlyDto>>> GetAuthors()
         {
-            var authors = await _context.Authors.ToListAsync();
-            var authorsDto = mapper.Map<IEnumerable<AuthorReadOnlyDto>>(authors);
-            return Ok(authorsDto);
+            _logger.LogInformation($"Request made to {nameof(GetAuthors)}");
+            try
+            { 
+                var authors = await _context.Authors.ToListAsync();
+                var authorsDto = _mapper.Map<IEnumerable<AuthorReadOnlyDto>>(authors);
+                return Ok(authorsDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Oh snap! You got an error during {nameof(GetAuthors)}");
+                return StatusCode(500, Messages.ErrorMessage500);
+            }
         }
 
         // GET: api/Authors/5
@@ -44,7 +56,7 @@ namespace BookstoreApp.API.Controllers
                 return NotFound();
             }
 
-            var authorDto = mapper.Map<AuthorReadOnlyDto>(author);
+            var authorDto = _mapper.Map<AuthorReadOnlyDto>(author);
             return Ok(authorDto);
         }
 
@@ -65,7 +77,7 @@ namespace BookstoreApp.API.Controllers
                 return NotFound();
             }
 
-            mapper.Map(authorUpdateDto, author);
+            _mapper.Map(authorUpdateDto, author);
             _context.Entry(author).State = EntityState.Modified;
 
             try
@@ -92,7 +104,7 @@ namespace BookstoreApp.API.Controllers
         [HttpPost]
         public async Task<ActionResult<AuthorCreateDto>> PostAuthor(AuthorCreateDto authorDto)
         {
-            var author = mapper.Map<Author>(authorDto);
+            var author = _mapper.Map<Author>(authorDto);
             await _context.Authors.AddAsync(author);
             await _context.SaveChangesAsync();
 
