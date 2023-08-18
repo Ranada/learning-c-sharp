@@ -26,23 +26,17 @@ namespace BookstoreApp.API.Controllers
 
         // GET: api/Authors
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Author>>> GetAuthors()
+        public async Task<ActionResult<IEnumerable<AuthorReadOnlyDto>>> GetAuthors()
         {
-            if (_context.Authors == null)
-            {
-                return NotFound();
-            }
-            return await _context.Authors.ToListAsync();
+            var authors = await _context.Authors.ToListAsync();
+            var authorsDto = mapper.Map<IEnumerable<AuthorReadOnlyDto>>(authors);
+            return Ok(authorsDto);
         }
 
         // GET: api/Authors/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Author>> GetAuthor(int id)
+        public async Task<ActionResult<AuthorReadOnlyDto>> GetAuthor(int id)
         {
-            if (_context.Authors == null)
-            {
-                return NotFound();
-            }
             var author = await _context.Authors.FindAsync(id);
 
             if (author == null)
@@ -50,19 +44,28 @@ namespace BookstoreApp.API.Controllers
                 return NotFound();
             }
 
-            return author;
+            var authorDto = mapper.Map<AuthorReadOnlyDto>(author);
+            return Ok(authorDto);
         }
 
         // PUT: api/Authors/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAuthor(int id, Author author)
+        public async Task<IActionResult> PutAuthor(int id, AuthorUpdateDto authorUpdateDto)
         {
-            if (id != author.Id)
+            if (id != authorUpdateDto.Id)
             {
                 return BadRequest();
             }
 
+            var author = await _context.Authors.FindAsync(id);
+
+            if (author == null)
+            {
+                return NotFound();
+            }
+
+            mapper.Map(authorUpdateDto, author);
             _context.Entry(author).State = EntityState.Modified;
 
             try
