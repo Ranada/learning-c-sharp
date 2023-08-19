@@ -49,15 +49,24 @@ namespace BookstoreApp.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<AuthorReadOnlyDto>> GetAuthor(int id)
         {
-            var author = await _context.Authors.FindAsync(id);
-
-            if (author == null)
+            _logger.LogInformation($"Request made to {nameof(GetAuthor)}");
+            try
             {
-                return NotFound();
-            }
+                var author = await _context.Authors.FindAsync(id);
 
-            var authorDto = _mapper.Map<AuthorReadOnlyDto>(author);
-            return Ok(authorDto);
+                if (author == null)
+                {
+                    return NotFound();
+                }
+
+                var authorDto = _mapper.Map<AuthorReadOnlyDto>(author);
+                return Ok(authorDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Oh snap! You got an error during {nameof(GetAuthor)}");
+                return StatusCode(500, Messages.ErrorMessage500);
+            }
         }
 
         // PUT: api/Authors/5
@@ -67,6 +76,7 @@ namespace BookstoreApp.API.Controllers
         {
             if (id != authorUpdateDto.Id)
             {
+                _logger.LogWarning($"Oh snap! You got an error during {nameof(PutAuthor)} -> Parameter Id-{id} does not match Author Id-{authorUpdateDto.Id}");
                 return BadRequest();
             }
 
@@ -74,6 +84,7 @@ namespace BookstoreApp.API.Controllers
 
             if (author == null)
             {
+                _logger.LogWarning($"Oh snap! You got an error during {nameof(PutAuthor)} -> Author data does not exist.");
                 return NotFound();
             }
 
@@ -88,6 +99,7 @@ namespace BookstoreApp.API.Controllers
             {
                 if (!AuthorExists(id))
                 {
+                    _logger.LogWarning($"Oh snap! You got an error during {nameof(PutAuthor)} -> Could not find Id: {id}");
                     return NotFound();
                 }
                 else
