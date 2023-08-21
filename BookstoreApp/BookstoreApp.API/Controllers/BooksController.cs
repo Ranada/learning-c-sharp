@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BookstoreApp.API.Data;
 using AutoMapper;
 using BookstoreApp.API.Models.Book;
+using AutoMapper.QueryableExtensions;
 
 namespace BookstoreApp.API.Controllers
 {
@@ -28,9 +29,13 @@ namespace BookstoreApp.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BookReadOnlyDto>>> GetBooks()
         {
-            var books = await _context.Books.ToListAsync();
-            var bookDtos = mapper.Map<IEnumerable<BookReadOnlyDto>>(books);
-            return Ok(bookDtos);
+            var books = await _context.Books
+                .Include(q => q.Author)
+                .ProjectTo<BookReadOnlyDto>(mapper.ConfigurationProvider)
+                .ToListAsync();
+            //var bookDtos = mapper.Map<IEnumerable<BookReadOnlyDto>>(books);
+            //return Ok(bookDtos);
+            return books;
         }
 
         // GET: api/Books/5
