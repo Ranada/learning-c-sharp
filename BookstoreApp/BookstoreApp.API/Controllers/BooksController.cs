@@ -40,20 +40,26 @@ namespace BookstoreApp.API.Controllers
 
         // GET: api/Books/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBook(int id)
+        public async Task<ActionResult<BookDetailsDto>> GetBook(int id)
         {
-            if (_context.Books == null)
-            {
-                return NotFound();
-            }
-            var book = await _context.Books.FindAsync(id);
+            var book = await _context.Books
+                .Include(q => q.Author)
+                .ProjectTo<BookDetailsDto>(mapper.ConfigurationProvider)
+                .FirstOrDefaultAsync(q => q.Id == id);
+            return Ok(book);
 
-            if (book == null)
-            {
-                return NotFound();
-            }
+            //if (_context.Books == null)
+            //{
+            //    return NotFound();
+            //}
+            //var book = await _context.Books.FindAsync(id);
 
-            return book;
+            //if (book == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //return book;
         }
 
         // PUT: api/Books/5
