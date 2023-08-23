@@ -71,13 +71,21 @@ namespace BookstoreApp.API.Controllers
         // PUT: api/Books/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBook(int id, Book book)
+        public async Task<IActionResult> PutBook(int id, BookUpdateDto bookUpdateDto)
         {
-            if (id != book.Id)
+            if (id != bookUpdateDto.Id)
             {
                 return BadRequest();
             }
 
+            var book = await _context.Books.FindAsync(id);
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            mapper.Map(bookUpdateDto, book);
             _context.Entry(book).State = EntityState.Modified;
 
             try

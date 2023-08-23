@@ -14,6 +14,7 @@ namespace BookstoreApp.API.Configurations
             CreateMap<AuthorReadOnlyDto, Author>().ReverseMap();
 
             CreateMap<BookCreateDto, Book>().ReverseMap();
+            CreateMap<BookUpdateDto, Book>().ReverseMap();
             CreateMap<Book, BookReadOnlyDto>()
                 .ForMember(q => q.AuthorName, d => d.MapFrom(map => $"{map.Author.FirstName} {map.Author.LastName}"))
                 .ReverseMap();
