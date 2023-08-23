@@ -46,6 +46,12 @@ namespace BookstoreApp.API.Controllers
                 .Include(q => q.Author)
                 .ProjectTo<BookDetailsDto>(mapper.ConfigurationProvider)
                 .FirstOrDefaultAsync(q => q.Id == id);
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+
             return Ok(book);
 
             //if (_context.Books == null)
