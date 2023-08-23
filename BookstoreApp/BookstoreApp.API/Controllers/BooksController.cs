@@ -102,13 +102,15 @@ namespace BookstoreApp.API.Controllers
         // POST: api/Books
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Book>> PostBook(Book book)
+        public async Task<ActionResult<BookCreateDto>> PostBook(BookCreateDto bookDto)
         {
             if (_context.Books == null)
             {
                 return Problem("Entity set 'BookStoreDbContext.Books'  is null.");
             }
-            _context.Books.Add(book);
+
+            var book = mapper.Map<Book>(bookDto);
+            await _context.Books.AddAsync(book);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetBook", new { id = book.Id }, book);
