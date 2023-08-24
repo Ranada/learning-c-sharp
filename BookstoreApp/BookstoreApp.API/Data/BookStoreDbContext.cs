@@ -28,11 +28,11 @@ public partial class BookStoreDbContext : IdentityDbContext<ApiUser>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // Making sure we pass IdentityDbContext<ApiUser> data since we're using code first migration
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<Author>(entity =>
         {
-            // Making sure we pass IdentityDbContext<ApiUser> data since we're using code first migration
-            base.OnModelCreating(modelBuilder);
-
             entity.HasKey(e => e.Id).HasName("PK__Authors__3213E83FEC7B43DA");
 
             entity.Property(e => e.Id).HasColumnName("id");
