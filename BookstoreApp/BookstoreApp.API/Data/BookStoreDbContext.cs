@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -60,6 +61,21 @@ public partial class BookStoreDbContext : IdentityDbContext<ApiUser>
                 .HasForeignKey(d => d.AuthorId)
                 .HasConstraintName("FK_Books_ToAuthors");
         });
+
+        modelBuilder.Entity<IdentityRole>().HasData(
+            new IdentityRole
+            {
+                Id = "ad184e73-807a-45dc-b053-ff3965964a0d",
+                Name = "User",
+                NormalizedName = "USER",
+            },
+            new IdentityRole
+            {
+                Id = "b93d694c-c048-4d97-83d8-7d57d94082b1",
+                Name = "Admin",
+                NormalizedName = "ADMIN",
+            }
+        );
 
         OnModelCreatingPartial(modelBuilder);
     }
