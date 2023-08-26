@@ -30,6 +30,7 @@ namespace BookstoreApp.API.Controllers
             try
             { 
                 var user = mapper.Map<ApiUser>(userDto);
+                user.UserName = userDto.Email;
                 var result = await userManager.CreateAsync(user, userDto.Password);
 
                 if (result.Succeeded == false)
@@ -47,6 +48,30 @@ namespace BookstoreApp.API.Controllers
             {
                 logger.LogError(ex, $"Something went wrong in the {nameof(Register)}");
                 return Problem($"Something went wront in the {nameof(Register)}", statusCode: 500);
+            }
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> Login(LoginUserDto userDto)
+        {
+            logger.LogInformation($"Login attempt for {userDto.Email}");
+            try
+            { 
+                var user = await userManager.FindByEmailAsync(userDto.Email);
+                var isPasswordValid = await userManager.CheckPasswordAsync(user, userDto.Password);
+                
+                if (user == null || isPasswordValid == false)
+                {
+                    return NotFound();
+                }
+
+                return Accepted();
+            } 
+            catch (Exception ex)
+            {
+                logger.LogError(ex, $"Something went wrong in the {nameof(Login)}");
+                return Problem($"Something went wront in the {nameof(Login)}", statusCode: 500);
             }
         }
     }
