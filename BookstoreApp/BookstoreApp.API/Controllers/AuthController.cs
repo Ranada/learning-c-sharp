@@ -63,7 +63,7 @@ namespace BookstoreApp.API.Controllers
                 
                 if (user == null || isPasswordValid == false)
                 {
-                    return NotFound();
+                    return Unauthorized(userDto);
                 }
 
                 return Accepted();
