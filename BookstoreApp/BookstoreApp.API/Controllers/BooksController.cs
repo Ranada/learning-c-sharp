@@ -15,7 +15,7 @@ namespace BookstoreApp.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class BooksController : ControllerBase
     {
         private readonly BookStoreDbContext _context;
@@ -29,6 +29,7 @@ namespace BookstoreApp.API.Controllers
 
         // GET: api/Books
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<BookReadOnlyDto>>> GetBooks()
         {
             var booksDtos = await _context.Books
@@ -42,6 +43,7 @@ namespace BookstoreApp.API.Controllers
 
         // GET: api/Books/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<BookDetailsDto>> GetBook(int id)
         {
             var book = await _context.Books
@@ -56,23 +58,12 @@ namespace BookstoreApp.API.Controllers
 
             return Ok(book);
 
-            //if (_context.Books == null)
-            //{
-            //    return NotFound();
-            //}
-            //var book = await _context.Books.FindAsync(id);
-
-            //if (book == null)
-            //{
-            //    return NotFound();
-            //}
-
-            //return book;
         }
 
         // PUT: api/Books/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> PutBook(int id, BookUpdateDto bookUpdateDto)
         {
             if (id != bookUpdateDto.Id)
@@ -112,6 +103,7 @@ namespace BookstoreApp.API.Controllers
         // POST: api/Books
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<BookCreateDto>> PostBook(BookCreateDto bookDto)
         {
             if (_context.Books == null)
@@ -128,6 +120,7 @@ namespace BookstoreApp.API.Controllers
 
         // DELETE: api/Books/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteBook(int id)
         {
             if (_context.Books == null)
