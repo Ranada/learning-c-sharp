@@ -9,11 +9,13 @@ using BookstoreApp.API.Data;
 using AutoMapper;
 using BookstoreApp.API.Models.Book;
 using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookstoreApp.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly BookStoreDbContext _context;
