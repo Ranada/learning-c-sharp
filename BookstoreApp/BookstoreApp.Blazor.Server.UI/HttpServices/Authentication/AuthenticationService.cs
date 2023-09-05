@@ -10,9 +10,17 @@ namespace BookstoreApp.Blazor.Server.UI.HttpServices.Authentication
         {
             this.httpClient = httpClient;
         }
-        public Task<bool> AuthenticateAsync(LoginUserDto loginModel)
+        public async Task<bool> AuthenticateAsync(LoginUserDto loginModel)
         {
-            throw new NotImplementedException();
+            var response = await httpClient.LoginAsync(loginModel);
+
+            // Store token
+
+
+            // Change auth state of app
+
+
+            return true;
         }
     }
 

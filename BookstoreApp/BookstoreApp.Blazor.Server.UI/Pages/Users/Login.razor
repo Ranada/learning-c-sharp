@@ -33,6 +33,13 @@
         {
             var response = await authService.AuthenticateAsync(LoginModel);
 
+            if (response)
+            {
+
+            }
+
+            message = "Invalid credentials. Please try again.";
+
         }
         catch (ApiException ex)
         {
