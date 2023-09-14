@@ -8,8 +8,8 @@ namespace ContosoPizzaApi.Controllers;
 [Route("[controller]")]
 public class PizzaController : ControllerBase
 {
-    public PizzaController() 
-    { 
+    public PizzaController()
+    {
     }
 
     // GET all action
@@ -17,7 +17,18 @@ public class PizzaController : ControllerBase
     public ActionResult<List<Pizza>> GetAll() => PizzaService.GetAll();
 
     // GET by Id action
+    [HttpGet("{id}")]
+    public ActionResult<Pizza> Get(int id)
+    { 
+        var pizza = PizzaService.Get(id);
 
+        if (pizza == null) 
+        {
+            return NotFound();
+        }
+
+        return Ok(pizza);
+    }
 
     // POST action
 
