@@ -10,12 +10,14 @@ public class PizzaController : ControllerBase
 {
     public PizzaController() 
     { 
-    
     }
 
     // GET all action
+    [HttpGet]
+    public ActionResult<List<Pizza>> GetAll() => PizzaService.GetAll();
 
     // GET by Id action
+
 
     // POST action
 
