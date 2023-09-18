@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoPizzaApi", "ContosoPizzaApi\ContosoPizzaApi.csproj", "{A976502C-BDF8-431C-8ABB-85A48027755D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContosoPizzaApi", "ContosoPizzaApi\ContosoPizzaApi.csproj", "{A976502C-BDF8-431C-8ABB-85A48027755D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{DAE79C02-6731-4245-8EC6-5AE8599D37B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A976502C-BDF8-431C-8ABB-85A48027755D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A976502C-BDF8-431C-8ABB-85A48027755D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A976502C-BDF8-431C-8ABB-85A48027755D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE79C02-6731-4245-8EC6-5AE8599D37B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE79C02-6731-4245-8EC6-5AE8599D37B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE79C02-6731-4245-8EC6-5AE8599D37B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE79C02-6731-4245-8EC6-5AE8599D37B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
