@@ -4,10 +4,14 @@
 jobs:
   server:
     source:
-      repository: https://github.com/Ranada/learning-c-sharp
-      branchOrCommit: main
-      project: MicrosoftTraining/mslearn-create-web-api-aspnet-core/ContosoPizzaApi/ContosoPizzaApi.csproj
+      localFolder: ./
+      project: ContosoPizzaApi.csproj
     readyStateText: Application started.
+    # source:
+    #   repository: https://github.com/Ranada/learning-c-sharp
+    #   branchOrCommit: main
+    #   project: MicrosoftTraining/mslearn-create-web-api-aspnet-core/ContosoPizzaApi/ContosoPizzaApi.csproj
+    # readyStateText: Application started.
 
 scenarios:
   api:
@@ -17,7 +21,7 @@ scenarios:
       job: bombardier
       variables:
         serverPort: 5000
-        path: /
+        path: /Pizza
 
 profiles:
   local:
