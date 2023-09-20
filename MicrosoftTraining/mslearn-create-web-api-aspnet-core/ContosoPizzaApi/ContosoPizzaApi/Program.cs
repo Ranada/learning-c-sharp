@@ -1,4 +1,6 @@
 
+using Dumpify;
+
 namespace ContosoPizzaApi
 {
     public class Program
@@ -14,7 +16,10 @@ namespace ContosoPizzaApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            //builder.Service.Dump();
+
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -27,10 +32,11 @@ namespace ContosoPizzaApi
 
             app.UseAuthorization();
 
-
             app.MapControllers();
 
             app.Run();
+            
+            //app.Dump();
         }
     }
 }
