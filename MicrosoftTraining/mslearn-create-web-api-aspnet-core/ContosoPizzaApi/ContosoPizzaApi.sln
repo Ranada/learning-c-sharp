@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContosoPizzaApi", "ContosoPizzaApi\ContosoPizzaApi.csproj", "{A976502C-BDF8-431C-8ABB-85A48027755D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{DAE79C02-6731-4245-8EC6-5AE8599D37B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{DAE79C02-6731-4245-8EC6-5AE8599D37B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppUI", "BlazorAppUI\BlazorAppUI.csproj", "{2D54895E-7D8E-4CF7-BDC8-CD8924C93EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DAE79C02-6731-4245-8EC6-5AE8599D37B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAE79C02-6731-4245-8EC6-5AE8599D37B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAE79C02-6731-4245-8EC6-5AE8599D37B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D54895E-7D8E-4CF7-BDC8-CD8924C93EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D54895E-7D8E-4CF7-BDC8-CD8924C93EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D54895E-7D8E-4CF7-BDC8-CD8924C93EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D54895E-7D8E-4CF7-BDC8-CD8924C93EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
