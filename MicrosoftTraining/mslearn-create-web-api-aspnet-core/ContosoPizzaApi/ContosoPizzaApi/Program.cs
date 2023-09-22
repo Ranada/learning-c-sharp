@@ -3,6 +3,8 @@ using ContosoPizzaApi.Data;
 using ContosoPizzaApi.Services;
 using Dumpify;
 using Microsoft.AspNetCore.OData;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 
 namespace ContosoPizzaApi
 {
@@ -12,16 +14,13 @@ namespace ContosoPizzaApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddControllers().AddOData(options => 
-                options.EnableQueryFeatures());
+                options.EnableQueryFeatures().AddRouteComponents("api", GetEdmModel()));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IPizzaService, PizzaService>();
 
-            builder.Services.AddHttpClient();
+            //builder.Services.AddHttpClient();
 
             var connectionString = builder.Configuration["ConnectionString"];
             builder.Services.AddSqlServer<PizzaStoreContext>(connectionString);
@@ -44,21 +43,19 @@ namespace ContosoPizzaApi
 
             app.MapControllers();
 
-            //var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
-            //using (var scope = scopeFactory.CreateScope())
-            //{
-            //    var db = scope.ServiceProvider.GetRequiredService<PizzaStoreContext>();
-            //    if (db.Database.EnsureCreated())
-            //    {
-            //        SeedData.Initialize(db);
-            //    }
-            //}
 
             app.CreateDbIfNotExists();
 
             app.Run();
             
             //app.Dump();
+        }
+
+        public static IEdmModel GetEdmModel()
+        {
+            var modelBuilder = new ODataConventionModelBuilder();
+            modelBuilder.EntitySet<WeatherForecast>("WeatherForecast");
+            return modelBuilder.GetEdmModel();
         }
     }
 }
