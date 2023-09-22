@@ -71,7 +71,7 @@ a, .btn-link {
     display: grid;
     grid-template-columns: repeat(auto-fill, 20rem);
     grid-gap: 2rem;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-left: 0;
 }
 
