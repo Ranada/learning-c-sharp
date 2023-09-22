@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ContosoPizzaApi.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace ContosoPizzaApi.Data;
 
 public class PizzaStoreContext : DbContext
 {
-    public PizzaStoreContext(DbContextOptions options) : base(options)
+    public PizzaStoreContext(DbContextOptions<PizzaStoreContext> options) : base(options)
     { 
     }
 
