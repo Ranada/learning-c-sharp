@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
 
 namespace ContosoPizzaApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController : ODataController
     {
         private static readonly string[] Summaries = new[]
         {
@@ -18,6 +20,7 @@ namespace ContosoPizzaApi.Controllers
             _logger = logger;
         }
 
+        [EnableQuery]
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {

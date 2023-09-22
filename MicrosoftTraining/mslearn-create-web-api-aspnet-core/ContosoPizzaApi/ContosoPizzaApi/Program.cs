@@ -2,6 +2,7 @@
 using ContosoPizzaApi.Data;
 using ContosoPizzaApi.Services;
 using Dumpify;
+using Microsoft.AspNetCore.OData;
 
 namespace ContosoPizzaApi
 {
@@ -13,8 +14,9 @@ namespace ContosoPizzaApi
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddControllers().AddOData(options => 
+                options.EnableQueryFeatures());
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IPizzaService, PizzaService>();
