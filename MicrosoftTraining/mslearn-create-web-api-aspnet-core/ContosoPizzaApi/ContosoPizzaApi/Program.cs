@@ -1,10 +1,14 @@
 
 using ContosoPizzaApi.Data;
+using ContosoPizzaApi.Models;
 using ContosoPizzaApi.Services;
 using Dumpify;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.OData;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
+using System.Security.Claims;
 
 namespace ContosoPizzaApi
 {
@@ -19,11 +23,22 @@ namespace ContosoPizzaApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IPizzaService, PizzaService>();
+            
+            var connectionString = builder.Configuration["ConnectionString"];
+            builder.Services.AddDbContext<PizzaStoreContext>(x => x.UseSqlServer(connectionString));
+            // AddSqlServer is a shortcut version of AddDbContext above, but has less options
+            //builder.Services.AddSqlServer<PizzaStoreContext>(connectionString);
+
+            builder.Services.AddAuthentication().AddBearerToken(IdentityConstants.BearerScheme);
+            builder.Services.AddAuthorizationBuilder();
+
+            builder.Services.AddIdentityCore<User>()
+                .AddEntityFrameworkStores<PizzaStoreContext>()
+                .AddApiEndpoints();
+
 
             //builder.Services.AddHttpClient();
 
-            var connectionString = builder.Configuration["ConnectionString"];
-            builder.Services.AddSqlServer<PizzaStoreContext>(connectionString);
 
             //builder.Service.Dump();
 
@@ -45,6 +60,11 @@ namespace ContosoPizzaApi
 
 
             app.CreateDbIfNotExists();
+            
+            app.MapIdentityApi<User>();
+
+            app.MapGet("/", (ClaimsPrincipal user) => $"Hello {user.Identity!.Name}")
+                .RequireAuthorization();
 
             app.Run();
             
