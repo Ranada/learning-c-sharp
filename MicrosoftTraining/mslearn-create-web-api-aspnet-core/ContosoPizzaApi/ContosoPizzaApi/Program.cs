@@ -36,7 +36,6 @@ namespace ContosoPizzaApi
                 .AddEntityFrameworkStores<PizzaStoreContext>()
                 .AddApiEndpoints();
 
-
             //builder.Services.AddHttpClient();
 
 

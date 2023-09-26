@@ -1,0 +1,16 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+# GET https://localhost:7073/
+
+POST https://localhost:7073/login
+Content-Type: application/json
+
+{
+  "email": "testuser@email.com",
+  "password": "Testuser123!"
+}
+
+###
+
+GET https://localhost:7073
+Authorization: Bearer CfDJ8F7LMYCogTdPpU7YqFDjWcOuZahW86_P9mxb43mhbjj5gDcii5soFhkYbv23mjPjbsxhLmhiJ6eyNGSkegrVcFFkZsnG9mdILE0js8xqjGZhini-9k14wWnaBtEyie5Nwtc_arTDdOa1vPYoXy7Vt_PmyMGVAOl9yWCE8MwenIIgnEGc32ZKaWiC09dOENYI6YDzgWHZE78aAS2CSqHL4l4-A7oQUFPtk4DAEOfkaN_XiEtgHM3LSMQF3u0DuI-xc-8Z3Kd-oe2GLHaAVSv5NN4MLVY_9CwNJzD6T7bflSk-f9jTWHoXOLO33cdVopKv589XyTBKZZZXly5SHsdpB4iWJa6pmyVKK2aAikClVzEEoWD0X5lwE4FBuCtpaoUwaqG7NWHQVP8lvWXh4O3kfMYJx90CFYCjc7SihUd_1TPnWvADSBC6wXgyabf7tlVWCwp-_0Tii8yEDzgyATtjjRC84of8XKaoAS8ac8wqfhWlftXQ7mDM04VZlhozpLiXJgbjMf-KU-H-n9H5sKCX9FICVljDO-A4I1_tGgKpsgCIRRPzpNnJ60ilxsoCV77fy67IiowicDVs3g-s7BlbcUeTSk5gV6BRi3mRctnlk50YNWymfLLn-a0BuI4j5HwaAKxmqKMybIyBKIDSCQmb6xi-5Rmdl4WOZ2XSVAuIGXbspGL6N3qdhpqYKpJYR-oNMk3eVVP9pkpxvezWC7PpgKY
