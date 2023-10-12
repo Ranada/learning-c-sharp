@@ -10,6 +10,6 @@ internal class Program
 
         var heap = new Heap();
 
-        Console.WriteLine("Heap length: {0}", heap.nodeList.Count);
+        Console.WriteLine("Heap length: {0}", heap.List.Count);
     }
 }
