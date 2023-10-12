@@ -9,5 +9,7 @@ internal class Program
         Console.WriteLine("Hello from Program.cs");
 
         var heap = new Heap();
+
+        Console.WriteLine("Heap length: {0}", heap.nodeList.Count);
     }
 }

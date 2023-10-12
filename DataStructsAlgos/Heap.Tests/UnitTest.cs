@@ -19,10 +19,11 @@ namespace HeapPractice.Tests
             var heap = new Heap();
 
             // Act
-            _output.WriteLine("Expected Node list length: 1. Result: {0}", heap.Length);
+            _output.WriteLine("Expected Node list length: 1. Result: {0}", heap.nodeList.Count);
+            var count = heap.nodeList.Count;
 
             // Assert
-            Assert.Equal(1, heap.Length);
+            Assert.Equal(1, count);
         }
 
         [Fact]
