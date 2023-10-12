@@ -1,4 +1,5 @@
 using AlgoLibrary;
+using FluentAssertions;
 using Xunit.Abstractions;
 
 namespace HeapPractice.Tests
@@ -23,7 +24,8 @@ namespace HeapPractice.Tests
             var count = heap.nodeList.Count;
 
             // Assert
-            Assert.Equal(1, count);
+            //Assert.Equal(1, count);
+            count.Should().Be(1);
         }
 
         [Fact]
@@ -34,9 +36,10 @@ namespace HeapPractice.Tests
 
             // Act
             _output.WriteLine("Expected heap[0] = 0. Result: {0}", heap.nodeList[0]);
-                
+
             // Assert
-            Assert.Equal(0, heap.nodeList[0]);
+            //Assert.Equal(0, heap.nodeList[0]);
+            heap.nodeList[0].Should().Be(0);
         }
     }
 }
