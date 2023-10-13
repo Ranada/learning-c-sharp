@@ -68,5 +68,66 @@ namespace HeapPractice.Tests
             // Assert
             heap.List[1].Should().Be(1);
         }
+
+        [Fact]
+        public void Popping_empty_heap_should_return_null()
+        {
+            // Arrange
+            var heap = new Heap();
+
+            // Act
+            int? minVal = heap.Pop();
+
+            // Assert
+            minVal.Should().Be(null);
+        }
+
+        [Fact]
+        public void Popping_heap_with_one_value_should_return_that_value()
+        {
+            // Arrange
+            var heap = new Heap();
+            heap.Push(99);
+
+            // Act
+            int? minVal = heap.Pop();
+
+            // Assert
+            minVal.Should().Be(99);
+        }
+
+        [Fact]
+        public void Popping_heap_with_more_than_two_values_will_return_the_minimum_value()
+        {
+            // Arrange
+            var heap = new Heap();
+            heap.Push(99);
+            heap.Push(1);
+            heap.Push(22);
+
+            // Act
+            int? minVal = heap.Pop();
+
+            // Assert
+            minVal.Should().Be(1);
+        }
+
+        [Fact]
+        public void Popping_heap_with_more_than_two_values_will_place_the_next_min_value_at_index_one()
+        {
+            // Arrange
+            var heap = new Heap();
+            heap.Push(99);
+            heap.Push(1);
+            heap.Push(77);
+            heap.Push(22);
+            heap.Push(55);
+
+            // Act
+            int? minVal = heap.Pop();
+
+            // Assert
+            heap.List[1].Should().Be(22);
+        }
     }
 }
