@@ -29,15 +29,18 @@ do
 
     if (roll1 == roll2 || roll2 == roll3 || roll1 == roll3)
     {
-        Console.WriteLine("You rolled doubles! +2 bonus points to total!");
-        total += 2;
+        if ((roll1 == roll2) && (roll2 == roll3))
+        {
+            Console.WriteLine("You rolled triples! Winner, winner, chicken dinner! +6 bonus points to total!");
+            total += 6;
+        }
+        else
+        {
+            Console.WriteLine("You rolled doubles! +2 bonus points to total!");
+            total += 2;
+        }
     }
 
-    if ((roll1 == roll2) && (roll2 == roll3))
-    {
-        Console.WriteLine("You rolled triples! Winner, winner, chicken dinner! +6 bonus points to total!");
-        total += 6;
-    }
 
     Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
 
