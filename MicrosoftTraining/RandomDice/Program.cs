@@ -44,13 +44,21 @@ do
 
     Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
 
-    if (total >= 15)
+    if (total >= 16)
     {
-        Console.WriteLine("Congrats you win!");
+        Console.WriteLine("Congrats you win a car!");
+    }
+    else if (total >= 10)
+    {
+        Console.WriteLine("Congrats your win a laptop");
+    }
+    else if (total == 7)
+    {
+        Console.WriteLine("You win a trip!");
     }
     else
     {
-        Console.WriteLine("Womp womp. Sorry you loss.");
+        Console.WriteLine("You win a kitten!");
     }
     
     Console.WriteLine("\nPress any key to continue. Or type 'exit' to end the program");
