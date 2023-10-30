@@ -7,14 +7,15 @@
 
     for (int R = 1; R < nums.Length; R++)
     {
+        int currentNum = nums[R];
         int L = R - 1;
-        while (L >= 0 && nums[L] > nums[L + 1])
+
+        while (L >= 0 && nums[L] > currentNum)
         {
-            int temp = nums[L];
-            nums[L] = nums[L + 1];
-            nums[L + 1] = temp;
+            nums[L + 1] = nums[L];
             L -= 1;
         }
+        nums[L + 1] = currentNum;
     }
 
     return nums;
