@@ -1,52 +1,68 @@
 ﻿using System.Collections;
 using static Students.Grades;
 
-int currentAssignments = 5;
 
-var sophiaGrades = new int[5] { sophia1, sophia2, sophia3, sophia4, sophia5 };
-var andrewGrades = new int[5] { andrew1, andrew2, andrew3, andrew4, andrew5 };
-var emmaGrades = new int[5] { emma1, emma2, emma3, emma4, emma5 };
-var loganGrades = new int[5] { logan1, logan2, logan3, logan4, logan5 };
+var students = new Dictionary<string, Student>();
 
-int sophiaSum = 0;
-int andrewSum = 0;
-int emmaSum = 0;
-int loganSum = 0;
+var names = new string[] {"Sophia", "Andrew", "Emma", "Logan"};
 
-foreach (int grade in sophiaGrades)
+foreach (string name in names)
 {
-    sophiaSum += grade;
+    var student = new Student(name);
+    students.Add(name, student);
 }
 
-foreach (int grade in andrewGrades)
+students["Sophia"].Grades = new int[] { 90, 86, 87, 98, 100 };
+students["Andrew"].Grades = new int[] { 92, 89, 81, 96, 90 };
+students["Emma"].Grades = new int[] { 90, 85, 87, 98, 68 };
+students["Logan"].Grades = new int[] { 90, 95, 87, 88, 96 };
+
+void PrintAllGrades(Dictionary<string, Student> students)
 {
-    andrewSum += grade;
+    Console.WriteLine("\nStudent\t\tGrade");
+    
+    foreach (var student in students)
+    {
+        Console.WriteLine($"{student.Key}:\t\t {student.Value.Average} {student.Value.LetterGrade}");     
+    }
 }
 
-foreach (int grade in emmaGrades)
+void PrintGrade(Student student)
 {
-    emmaSum += grade;
+    Console.WriteLine("\nStudent\t\tGrade");
+    Console.WriteLine($"{student.Name}:\t\t {student.Average} {student.LetterGrade}");
 }
 
-foreach (int grade in loganGrades)
+void CalculateGrade(Student student)
 {
-    loganSum += grade;
+    int sum = 0;
+
+    foreach (int grade in student.Grades)
+    {
+        sum += grade;
+    }
+
+    decimal average = (decimal)sum / student.Grades.Length;
+    
+    student.Average = average;
+
+    student.LetterGrade = GetLetterGrade(average);
 }
 
-decimal sophiaScore;
-decimal andrewScore;
-decimal emmaScore;
-decimal loganScore;
+void GetAllGrades(Dictionary<string, Student> students)
+{
+    foreach (var student in students)
+    {
+        CalculateGrade(student.Value);
+    }
+    PrintAllGrades(students);    
+}
 
-sophiaScore = (decimal)sophiaSum / currentAssignments;
-andrewScore = (decimal)andrewSum / currentAssignments;
-emmaScore = (decimal)emmaSum / currentAssignments;
-loganScore = (decimal)loganSum / currentAssignments;
-
-string sophiaLetterGrade = GetLetterGrade(sophiaScore);
-string andrewLetterGrade = GetLetterGrade(andrewScore);
-string emmaLetterGrade = GetLetterGrade(emmaScore);
-string loganLetterGrade = GetLetterGrade(loganScore);
+void GetGrade(Student student)
+{
+    CalculateGrade(student);
+    PrintGrade(student);
+}
 
 string GetLetterGrade(decimal score)
 {
@@ -66,12 +82,57 @@ string GetLetterGrade(decimal score)
             
 }
 
-Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Sophia:\t\t" + sophiaScore + " " + sophiaLetterGrade);
-Console.WriteLine("Andrew:\t\t" + andrewScore + " " + andrewLetterGrade);
-Console.WriteLine("Emma:\t\t" + emmaScore + " " + emmaLetterGrade);
-Console.WriteLine("Logan:\t\t" + loganScore + " " + loganLetterGrade);
+void RouteRequest(string entry)
+{   
+    if (entry.ToUpper() == "EXIT")
+    {
+        return;
+    }
 
-Console.WriteLine("\nPress the Enter key to continue");
-Console.ReadLine();
+    if (entry.ToUpper() == "ALL")
+    {
+        GetAllGrades(students);
+    }
+    else if (students.ContainsKey(entry))
+    {
+        GetGrade(students[entry]);
+    }
+    else
+    {
+        Console.WriteLine("Unable to find the student record. Try again.");
+    }
+}
+
+string? entry;
+do
+{
+    Console.WriteLine("\nWho's grades would you like to get? (Enter 'first name', 'all', or 'exit' to leave the program)");
+    entry = Console.ReadLine();
+    
+    if (entry != null)
+    {
+        RouteRequest(entry);
+    }
+
+} while (entry?.ToUpper() != "EXIT");
+
+
+
+public class Student
+{
+    public string Name {get; set;}
+    public int[] Grades {get; set;}
+    public decimal Average {get; set;}
+    public string? LetterGrade {get; set;}
+
+    public Student(string name)
+    {
+        Name = name;
+        Grades = new int[10];
+        Average = 0m;
+        LetterGrade = "";
+    }
+}
+
+
 
